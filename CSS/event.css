@@ -1,0 +1,265 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1b1b1b;
+    color: #e0e0e0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #0e0e0e;
+    color: #00d8ff;
+    padding: 1em 2em;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+header .logo img {
+    height: 40px;
+    width: 40px;
+    margin-right: 10px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+nav {
+    position: relative;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    margin: 0;
+}
+
+nav ul li {
+    position: relative;
+    margin-right: 2.5em;
+}
+
+nav ul li a {
+    color: #00d8ff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.5em 1em;
+    display: block;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+nav ul li:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #0e0e0e;
+    color: #00d8ff;
+    min-width: 220px;
+    max-height: 300px;
+    overflow-y: auto;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    padding: 0;
+    top: 100%;
+    right: 0;
+    margin-top: 1px;
+}
+
+.dropdown-content a {
+    color: #00d8ff;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    white-space: nowrap;
+}
+
+.dropdown-content a:hover {
+    background-color: #111;
+}
+
+main {
+    padding: 5em 2em;
+    margin-top: 4em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.hero {
+    text-align: center;
+    background-color: #2b2b2b;
+    padding: 4em 2em;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 1200px;
+    margin-bottom: 2em;
+}
+/* Add this to the existing CSS */
+.hero h1, .hero p {
+    opacity: 0;          /* Start invisible */
+    transform: translateY(20px); /* Start slightly below */
+    animation: moveUp 1s ease-out forwards;
+}
+
+@keyframes moveUp {
+    to {
+        opacity: 1;     /* Fade in */
+        transform: translateY(0); /* Move to normal position */
+    }
+}
+
+
+.hero h1 {
+    font-size: 3em;
+    margin: 0;
+    color: #00d8ff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero p {
+    font-size: 1.5em;
+    margin: 1em 0 0;
+    color: #e0e0e0;
+}
+
+.upcoming-workshops, .volunteer-signup, .tutoring-signup, .planned-events {
+    background-color: #2b2b2b;
+    padding: 2em;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 1200px;
+    margin-bottom: 2em;
+}
+
+.upcoming-workshops h2, .volunteer-signup h2, .tutoring-signup h2, .planned-events h2 {
+    margin-top: 0;
+    font-family: 'Montserrat', sans-serif;
+    color: #00d8ff;
+}
+
+.upcoming-workshops .workshop, .volunteer-signup, .tutoring-signup, .planned-events .event {
+    background-color: #333;
+    border-radius: 8px;
+    margin-bottom: 1em;
+    padding: 1em;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.upcoming-workshops .workshop h3, .planned-events .event h3 {
+    margin-top: 0;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-top: 0.5em;
+    color: #e0e0e0;
+}
+
+form input, form button {
+    padding: 0.5em;
+    margin-top: 0.5em;
+    border: none;
+    border-radius: 4px;
+}
+
+form input {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+}
+
+form button {
+    background-color: #00d8ff;
+    color: #1e1e1e;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #00b2cc;
+}
+
+footer {
+    background-color: #0e0e0e;
+    color: #e0e0e0;
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.contact-info {
+    text-align: left;
+    margin-left: 1em;
+    position: absolute;
+    top: 1em;
+    left: 0;
+}
+
+.contact-info h2 {
+    color: #00d8ff;
+    margin-top: 0;
+}
+
+.contact-details {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5em;
+}
+
+.contact-details img {
+    height: 20px;
+    width: 20px;
+    margin-right: 0.5em;
+    filter: brightness(0) invert(1); /* White icons */
+}
+
+.contact-details p {
+    margin: 0;
+    color: #e0e0e0;
+}
+
+.webnest-info {
+    text-align: center;
+    color: #00d8ff;
+    margin-top: 7.5em;
+}
