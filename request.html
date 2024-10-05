@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Request a Website - WebNest</title>
+    <link rel="stylesheet" href="CSS/request.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="JS/request.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img src="WebNest Images/logo.png" alt="WebNest Logo" />
+        WebNest
+      </div>
+      <nav>
+        <ul>
+          <li class="dropdown">
+            <a href="#" class="dropbtn">Menu</a>
+            <ul class="dropdown-content">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="request.html">Request a Website</a></li>
+              <li><a href="event.html">Event</a></li>
+              <li><a href="donation.html">Donate</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="blog.html">Blog</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="request-section">
+        <h2>Request a Website</h2>
+        <p class="instructions">
+          Please fill out the form below to request a custom website for your
+          business. Provide as much detail as possible to help us understand
+          your needs.
+        </p>
+        <form id="request-form">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required /><br />
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required /><br />
+
+          <label for="phone">Phone:</label>
+          <input type="tel" id="phone" name="phone" required /><br />
+
+          <label for="business-name">Business Name:</label>
+          <input type="text" id="business-name" name="business-name" required /><br />
+
+          <label for="website-type">Type of Website:</label>
+          <select id="website-type" name="website-type" required>
+            <option value="" disabled selected>Select an option</option>
+            <option value="personal">Personal</option>
+            <option value="business">Business</option>
+            <option value="e-commerce">E-commerce</option>
+            <option value="portfolio">Portfolio</option>
+            <option value="blog">Blog</option>
+            <option value="educational">Educational</option>
+            <option value="nonprofit">Nonprofit</option>
+            <option value="other">Other</option></select><br />
+
+          <input type="text" id="other-website-type" name="other-website-type" placeholder="Please specify" style="display: none" /><br />
+
+          <label for="description">Description:</label>
+          <textarea id="description" name="description" required></textarea><br />
+
+          <br />
+          <label for="deadline">Preferred Deadline:</label>
+          <input type="date" id="deadline" name="deadline" required /><br />
+
+          <button type="submit">Submit Request</button>
+        </form>
+      </section>
+    </main>
+    <footer>
+      <div class="footer-content">
+        <div class="contact-info">
+          <h2>Contact</h2>
+          <div class="contact-details">
+            <img src="WebNest Images/phone.png" alt="Phone Icon" />
+            <p><a href="tel:+18049314474">804-931-4474</a></p>
+          </div>
+          <div class="contact-details">
+            <img src="WebNest Images/email.png" alt="Email Icon" />
+            <p><a href="mailto:webnestvach@gmail.com">webnestvach@gmail.com</a></p>
+          </div>
+          <div class="contact-details">
+            <img src="WebNest Images/location.png" alt="Location Icon" />
+            <p>Colonial Heights, VA 23834</p>
+          </div>
+        </div>
+        <div class="webnest-info">
+          <p>&copy; 2024 WebNest</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

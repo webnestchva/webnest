@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event - WebNest</title>
+    <link rel="stylesheet" href="CSS/event.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img src="WebNest Images/logo.png" alt="WebNest Logo" />
+        WebNest
+      </div>
+      <nav>
+        <ul>
+          <li class="dropdown">
+            <a href="#" class="dropbtn">Menu</a>
+            <ul class="dropdown-content">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="request.html">Request a Website</a></li>
+              <li><a href="donation.html">Donate</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="blog.html">Blog</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <h1>Upcoming Workshops & Events</h1>
+        <p>
+          Join us for our upcoming workshops, sign up for tutoring sessions, and
+          get involved in our planned events!
+        </p>
+      </section>
+
+      <section class="upcoming-workshops">
+        <h2>Upcoming Workshops</h2>
+        <div class="workshop">
+          <h3>Workshop Title</h3>
+          <p>Description of the workshop goes here.</p>
+          <p>Date and Time: TBD</p>
+        </div>
+        <!-- Add more workshops as needed -->
+      </section>
+
+      <section class="volunteer-signup">
+        <h2>Volunteer Sign-Up</h2>
+        <form action="#" method="post">
+          <label for="volunteer-name">Name:</label>
+          <input
+            type="text"
+            id="volunteer-name"
+            name="volunteer-name"
+            required
+          />
+          <label for="volunteer-email">Email:</label>
+          <input
+            type="email"
+            id="volunteer-email"
+            name="volunteer-email"
+            required
+          />
+          <label for="volunteer-event">Event Interested In:</label>
+          <input
+            type="text"
+            id="volunteer-event"
+            name="volunteer-event"
+            required
+          />
+          <button type="submit">Sign Up</button>
+        </form>
+      </section>
+
+      <section class="tutoring-signup">
+        <h2>Tutoring Session Sign-Up</h2>
+        <form action="#" method="post">
+          <label for="tutoring-name">Name:</label>
+          <input type="text" id="tutoring-name" name="tutoring-name" required />
+          <label for="tutoring-email">Email:</label>
+          <input
+            type="email"
+            id="tutoring-email"
+            name="tutoring-email"
+            required
+          />
+          <label for="tutoring-event">Event Interested In:</label>
+          <input
+            type="text"
+            id="tutoring-event"
+            name="tutoring-event"
+            required
+          />
+          <button type="submit">Sign Up</button>
+        </form>
+      </section>
+
+      <section class="planned-events">
+        <h2>Planned Events</h2>
+        <div class="event">
+          <h3>Event Title</h3>
+          <p>Description of the event goes here.</p>
+          <p>Date and Time: TBD</p>
+        </div>
+        <!-- Add more events as needed -->
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <div class="contact-info">
+          <h2>Contact</h2>
+          <div class="contact-details">
+            <img src="WebNest Images/phone.png" alt="Phone Icon" />
+            <p><a href="tel:+18049314474">804-931-4474</a></p>
+          </div>
+          <div class="contact-details">
+            <img src="WebNest Images/email.png" alt="Email Icon" />
+            <p><a href="mailto:webnestvach@gmail.com">webnestvach@gmail.com</a></p>
+          </div>
+          <div class="contact-details">
+            <img src="WebNest Images/location.png" alt="Location Icon" />
+            <p>Colonial Heights, VA 23834</p>
+          </div>
+        </div>
+        <div class="webnest-info">
+          <p>&copy; 2024 WebNest</p>
+        </div>
+      </div>
+    </footer>
+    <script src="JS/event.js"></script>
+  </body>
+</html>
