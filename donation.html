@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Donate - WebNest</title>
     <link rel="stylesheet" href="CSS/donation.css" />
-    <!-- Google tag (gtag.js) -->
+     <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-YJBRM1FZQ3"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -52,10 +52,18 @@
           <li>Organizing tech workshops and events for the community</li>
           <li>Offering tutoring and mentoring to budding developers</li>
           <li>Promoting digital literacy and inclusion</li>
+          <p>
+            Note: Submitting this form does not confirm the receipt of your donation. Instead, we will reach out to you to finalize the donation process and ensure it aligns with your desired impact.
+          </p>
         </ul>
         <form id="donation-form">
-          <label for="donation-amount">Choose your donation amount:</label
-          ><br />
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required placeholder="Your Name" />
+        
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required placeholder="Your Email" />
+        
+          <label for="donation-amount">Choose your donation amount:</label>
           <div class="donation-values">
             <label>
               <input type="radio" name="donation-amount" value="1" required />
@@ -74,23 +82,13 @@
               <span>$20</span>
             </label>
             <label>
-              <input
-                type="radio"
-                name="donation-amount"
-                value="custom"
-                required
-              />
-              <input
-                type="number"
-                name="custom-amount"
-                placeholder="Other Amount"
-                min="1"
-              />
+              <input type="radio" name="donation-amount" value="custom" required />
+              <input type="number" name="custom-amount" placeholder="Other Amount" min="1" />
             </label>
           </div>
-          <br />
           <button type="submit">Donate Now</button>
         </form>
+        
       </section>
     </main>
     <footer>
