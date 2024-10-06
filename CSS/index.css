@@ -282,3 +282,74 @@ footer {
     margin-bottom: 1em; /* Add space below the image */
     object-fit: cover;  /* Ensure the image covers the area without distortion */
 }
+
+.purpose {
+    background-color: #2b2b2b;
+    padding: 3em;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 1200px;
+    margin-bottom: 2em;
+    color: #e0e0e0;
+    text-align: center;
+}
+
+.purpose h2 {
+    font-family: 'Montserrat', sans-serif;
+    color: #00d8ff;
+    font-size: 2.5em;
+    margin-bottom: 1em;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+.purpose .category-container {
+    display: flex;
+    justify-content: space-between; /* Distribute space evenly between boxes */
+    gap: 1.5%; /* Add space between the boxes */
+}
+
+.category {
+    width: 55%; /* Adjust the width to make the boxes longer */
+    height: 270px; /* You can adjust the height if needed */
+    padding: 1.5em;
+    background-color: #333;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: left; /* Left-align category content for better readability */
+}
+
+
+.category h3 {
+    font-family: 'Montserrat', sans-serif;
+    color: #00d8ff;
+    font-size: 1.5em;
+    text-align: center;
+    margin-bottom: 0.5em;
+    margin-top: 0; /* Remove any extra top margin */
+    padding-top: 0; /* Remove any padding at the top */
+    position: relative; /* Allows for fine-tuning with top */
+    top: -10px; /* Move the title 10px higher */
+}
+
+
+.category p {
+    font-size: 1.1em;
+    margin: 0;
+    color: #e0e0e0;
+}
+
+/* Make the layout responsive for smaller screens */
+@media (max-width: 768px) {
+    .category-container {
+        flex-direction: column; /* Stack boxes vertically on small screens */
+    }
+    
+    .category {
+        width: 100%; /* Full width on small screens */
+        margin-bottom: 1em;
+    }
+}
+
+
+
