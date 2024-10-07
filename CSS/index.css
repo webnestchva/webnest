@@ -351,6 +351,8 @@ footer {
     }
 }
 
+
+
 .read-more {
     color: #007bff; /* Use a more visible color */
     text-decoration: none; /* Optional: removes the underline */
@@ -362,4 +364,264 @@ footer {
     text-decoration: underline; /* Underline on hover for accessibility */
   }
   
+/* About Us Section */
+.about-us {
+    padding: 2em 1em;
+    background-color: #2b2b2b;  /* Dark background to match other sections */
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: #e0e0e0;
+    margin-bottom: 2em;
+}
 
+.about-us h2 {
+    font-size: 2.5em;
+    color: #00d8ff;  /* Matching the accent color used in other headers */
+    margin-bottom: 0.5em;
+    font-family: 'Montserrat', sans-serif;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+.about-us p {
+    font-size: 1.1em;
+    color: #e0e0e0;  /* Light text for better contrast */
+    max-width: 700px;
+    margin: 0 auto 1.5em;
+    line-height: 1.6;
+}
+
+.meet-the-team-btn {
+    font-size: 1em;
+    color: #ffffff;
+    background-color: #00d8ff;  /* Accent color */
+    border: none;
+    border-radius: 5px;
+    padding: 0.75em 1.5em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);  /* Subtle shadow for depth */
+}
+
+.meet-the-team-btn:hover {
+    background-color: #007ba1;  /* Slightly darker on hover */
+    transform: translateY(-3px);  /* Subtle lift on hover */
+}
+
+/* Daily Blogs Section */
+.daily-blogs {
+    padding: 2em 1em;
+    background-color: #1e1e1e;  /* Darker background to match the site's style */
+    color: #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.daily-blogs h2 {
+    font-size: 2.5em;
+    color: #00d8ff;
+    text-align: center;
+    margin-bottom: 1em;
+    font-family: 'Montserrat', sans-serif;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+.daily-blogs p {
+    font-size: 1.1em;
+    color: #e0e0e0;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 600px;
+    margin-bottom: 2em;
+    line-height: 1.6;
+}
+
+.blog-posts {
+    display: flex;
+    gap: 1.5em;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.blog-item {
+    background-color: #333;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    width: calc(33% - 1em);
+    min-width: 280px;
+    max-width: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blog-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.4);
+}
+
+.blog-item h3 {
+    font-size: 1.4em;
+    color: #00d8ff;
+    margin: 1em;
+    font-weight: bold;
+}
+
+.blog-item p {
+    font-size: 0.95em;
+    color: #e0e0e0;
+    line-height: 1.5;
+    margin: 0 1em 1em 1em;
+}
+
+.blog-item .read-more {
+    display: inline-block;
+    font-size: 0.95em;
+    color: #00d8ff;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 1em 1.5em;
+    transition: color 0.3s ease;
+}
+
+.blog-item .read-more:hover {
+    color: #007ba1;  /* Darker shade of the accent color */
+}
+
+
+/* Events Highlight Section */
+.events-highlight {
+    padding: 3em 1em;
+    background-color: #1e1e1e;
+    text-align: center;
+    color: #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 2em auto;
+    max-width: 1200px;
+  }
+  
+  .events-highlight h2 {
+    font-size: 2.5em;
+    color: #00d8ff;
+    margin-bottom: 0.5em;
+    font-family: 'Montserrat', sans-serif;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  .events-highlight p {
+    font-size: 1.1em;
+    margin: 0 auto 2em;
+    max-width: 800px;
+    line-height: 1.6;
+    color: #e0e0e0;
+  }
+  
+  .events-overview {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5em;
+    justify-content: center;
+  }
+  
+  .highlight-box {
+    background-color: #333;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 1.5em;
+    width: calc(33% - 1em);
+    min-width: 280px;
+    max-width: 300px;
+    text-align: left;
+  }
+  
+  .highlight-box h3 {
+    font-size: 1.6em;
+    color: #00d8ff;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+  }
+  
+  .highlight-box p {
+    font-size: 1em;
+    color: #e0e0e0;
+    line-height: 1.5;
+    margin-bottom: 1em;
+  }
+  
+  .highlight-box button {
+    font-size: 1em;
+    color: #ffffff;
+    background-color: #00d8ff;
+    border: none;
+    border-radius: 5px;
+    padding: 0.75em 1.5em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  
+  .highlight-box button:hover {
+    background-color: #007ba1;
+    transform: translateY(-3px);
+  }
+  
+  /* Responsive Styling */
+  @media (max-width: 768px) {
+    .events-overview {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .highlight-box {
+      width: 100%;
+      max-width: 500px;
+    }
+  }
+  
+  /* Request Website Section */
+/* Request Website Section */
+.request-website {
+    padding: 3em 1em;
+    background-color: #1e1e1e;  /* Dark background to match other sections */
+    color: #e0e0e0;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 2em auto;
+    max-width: 1200px;
+  }
+  
+  .request-website h2 {
+    font-size: 2.5em;
+    color: #00d8ff;  /* Accent color to match headers in other sections */
+    margin-bottom: 0.5em;
+    font-family: 'Montserrat', sans-serif;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  .request-website p {
+    font-size: 1.2em;
+    color: #e0e0e0;
+    max-width: 800px;
+    margin: 0 auto 1.5em;
+    line-height: 1.6;
+  }
+  
+  .request-website button {
+    font-size: 1.1em;
+    color: #1e1e1e;
+    background-color: #00d8ff;  /* Matching the accent color for buttons */
+    border: none;
+    border-radius: 5px;
+    padding: 0.75em 1.5em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-weight: bold;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  
+  .request-website button:hover {
+    background-color: #007ba1;  /* Slightly darker blue for hover */
+    transform: translateY(-3px);  /* Lift effect on hover */
+  }
+  
