@@ -202,42 +202,69 @@ main {
 
 /* Sidebar */
 .sidebar {
+    background-color: #2b2b2b;
+    padding: 2em;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 300px;
     margin-top: 2em;
+    color: #e0e0e0;
 }
 
 .sidebar h2 {
     color: #00d8ff;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 1em;
 }
 
 .sidebar input[type="text"] {
     width: 100%;
-    padding: 0.5em;
-    border-radius: 4px;
+    padding: 0.75em 1em;
+    border-radius: 20px; /* Rounded search bar */
     border: 1px solid #444;
     background-color: #333;
     color: #e0e0e0;
+    font-size: 1em;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.sidebar input[type="text"]::placeholder {
+    color: #999;
+    font-style: italic;
+}
+
+.sidebar input[type="text"]:focus {
+    border-color: #00d8ff; /* Highlighted border on focus */
 }
 
 .sidebar ul {
     list-style: none;
     padding: 0;
-    margin: 0;
+    margin-top: 1.5em;
+    margin-bottom: 0;
 }
 
 .sidebar ul li {
-    margin: 0.5em 0;
+    margin: 0.75em 0;
 }
 
 .sidebar ul li a {
-    color: #00d8ff;
+    color: #e0e0e0;
     text-decoration: none;
+    font-size: 1.1em;
+    padding: 0.5em 1em;
+    display: block;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
 .sidebar ul li a:hover {
-    text-decoration: underline;
+    background-color: #444;
+    color: #00d8ff;
 }
 
-/* Footer */
 /* Footer */
 footer {
     background-color: #0e0e0e;
@@ -332,3 +359,105 @@ footer {
     }
   }
   
+  /* Search Container */
+.search-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 100%;
+}
+
+/* Style the Input Field */
+.search-container input[type="text"] {
+    width: 100%;
+    padding: 0.75em 3em 0.75em 1em; /* Space on the right for the button */
+    border-radius: 20px; /* Rounded search bar */
+    border: 1px solid #444;
+    background-color: #333;
+    color: #e0e0e0;
+    font-size: 1em;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.search-container input[type="text"]:focus {
+    border-color: #00d8ff; /* Highlighted border on focus */
+}
+
+/* Style the Search Button */
+.search-button {
+    position: absolute;
+    right: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    pointer-events: auto;
+}
+
+.search-button img {
+    height: 1.2em; /* Adjust size as needed */
+    width: 1.2em;
+    filter: brightness(0) invert(1); /* Makes the icon white */
+    transition: transform 0.2s ease;
+}
+
+.search-button:hover img {
+    transform: scale(1.1); /* Slight zoom effect on hover */
+}
+/* Categories Section */
+.categories {
+    list-style: none;
+    padding: 0;
+    margin-top: 1.5em;
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.categories li {
+    margin: 0;
+    border-radius: 12px; /* Rounded corners */
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.categories li:hover {
+    transform: translateY(-3px); /* Slight lift effect */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Subtle shadow on hover */
+}
+
+.categories li a {
+    display: block;
+    padding: 0.75em 1em;
+    color: #e0e0e0;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: bold;
+    background-color: #333;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.categories li a:hover {
+    background-color: #00d8ff;
+    color: #1b1b1b; /* Text color on hover */
+}
+
+.categories li a:before {
+    content: '►';
+    margin-right: 0.5em;
+    color: #00d8ff;
+    font-size: 1.2em;
+    vertical-align: middle;
+    transition: transform 0.3s ease;
+}
+
+.categories li:hover a:before {
+    transform: translateX(5px); /* Arrow shifts right on hover */
+}
