@@ -5,15 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Donate - WebNest</title>
     <link rel="stylesheet" href="CSS/donation.css" />
-     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-YJBRM1FZQ3"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-YJBRM1FZQ3');
-</script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YJBRM1FZQ3"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-YJBRM1FZQ3');
+    </script>
   </head>
   <body>
     <header>
@@ -46,49 +45,8 @@
           organizations. Every dollar goes directly back to the community to
           foster growth and innovation.
         </p>
-        <p>By supporting WebNest, you contribute to:</p>
-        <ul>
-          <li>Providing free websites to small businesses and startups</li>
-          <li>Organizing tech workshops and events for the community</li>
-          <li>Offering tutoring and mentoring to budding developers</li>
-          <li>Promoting digital literacy and inclusion</li>
-          <p>
-            Note: Submitting this form does not confirm the receipt of your donation. Instead, we will reach out to you to finalize the donation process and ensure it aligns with your desired impact.
-          </p>
-        </ul>
-        <form id="donation-form">
-          <label for="name">Name:</label>
-          <input type="text" id="name" name="name" required placeholder="Your Name" />
-        
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email" required placeholder="Your Email" />
-        
-          <label for="donation-amount">Choose your donation amount:</label>
-          <div class="donation-values">
-            <label>
-              <input type="radio" name="donation-amount" value="1" required />
-              <span>$1</span>
-            </label>
-            <label>
-              <input type="radio" name="donation-amount" value="5" required />
-              <span>$5</span>
-            </label>
-            <label>
-              <input type="radio" name="donation-amount" value="10" required />
-              <span>$10</span>
-            </label>
-            <label>
-              <input type="radio" name="donation-amount" value="20" required />
-              <span>$20</span>
-            </label>
-            <label>
-              <input type="radio" name="donation-amount" value="custom" required />
-              <input type="number" name="custom-amount" placeholder="Other Amount" min="1" />
-            </label>
-          </div>
-          <button type="submit">Donate Now</button>
-        </form>
-        
+        <!-- Embed donation form iframe -->
+        <iframe src="https://hcb.hackclub.com/donations/start/webnest" style="border:none;" name="donateFrame" scrolling="yes" frameborder="0" marginheight="0px" marginwidth="0px" height="512px" width="512px" allowfullscreen></iframe>
       </section>
     </main>
     <footer>
