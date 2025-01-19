@@ -5,15 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Event - WebNest</title>
     <link rel="stylesheet" href="CSS/event.css" />
-     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-YJBRM1FZQ3"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-YJBRM1FZQ3"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-  gtag('config', 'G-YJBRM1FZQ3');
-</script>
+      gtag("config", "G-YJBRM1FZQ3");
+    </script>
   </head>
   <body>
     <header>
@@ -49,26 +54,46 @@
       <section class="upcoming-workshops">
         <h2>Upcoming Workshops</h2>
         <div class="workshop">
-          <h3>Kids Achieving Progress (KAP) - Introduction to Python for Grades 3-5</h3>
-          <p>Join us for an exciting afterschool workshop where students in grades 3-5 will learn the basics of Python programming. This beginner-friendly workshop will teach kids how to write simple code, understand programming logic, and foster their interest in technology and coding!</p>
-          <p>Date and Time: Every Wednesday in November, 4:00 PM - 5:00 PM</p>
-          <p>Location: Lakeview Elementary School, Colonial Heights, Virginia</p>
-      </div>
+          <h3>
+            Kids Achieving Progress (KAP) - Introduction to Python for Grades
+            3-5
+          </h3>
+          <p>
+            Join us for an exciting afterschool workshop where students in
+            grades 3-5 will learn the basics of Python programming. This
+            beginner-friendly workshop will teach kids how to write simple code,
+            understand programming logic, and foster their interest in
+            technology and coding!
+          </p>
+          <p>Date and Time: Every Wednesday in 4:00 PM - 5:00 PM</p>
+          <p>
+            Location: Lakeview Elementary School, Colonial Heights, Virginia
+          </p>
+        </div>
         <!-- Add more workshops as needed -->
       </section>
-      
+
       <section class="planned-events">
-        <h2>Planned Events</h2>
+        <h2>Upcoming Events</h2>
         <div class="event">
-          <h3>Event Title</h3>
-          <p>Description of the event goes here.</p>
-          <p>Date and Time: TBD</p>
+          <h3>Weekly Python Workshop and Computer Science Talks</h3>
+          <p>
+            Join us every Monday for an engaging and interactive online workshop
+            via Google Meet. This session will feature Python programming
+            tutorials and insightful discussions on computer science topics,
+            tailored to inspire and educate participants of all skill levels.
+          </p>
+          <p><strong>Schedule:</strong> Mondays, 3:30 - 5:00</p>
+          <p><strong>Platform:</strong> Google Meet</p>
         </div>
         <!-- Add more events as needed -->
       </section>
       <section class="volunteer-signup">
         <h2>Volunteer Sign-Up</h2>
-        <form action="https://script.google.com/macros/s/AKfycbxp2rPlWy_v9_7O4mR0u0gexsVWS3KMRBZ8d8gCEI_xhFBdVtlw3EpvckrDKudzl-YfNQ/exec" method="post">
+        <form
+          action="https://script.google.com/macros/s/AKfycbxp2rPlWy_v9_7O4mR0u0gexsVWS3KMRBZ8d8gCEI_xhFBdVtlw3EpvckrDKudzl-YfNQ/exec"
+          method="post"
+        >
           <label for="volunteer-name">Name:</label>
           <input
             type="text"
@@ -96,8 +121,10 @@
 
       <section class="tutoring-signup">
         <h2>Workshop Session Sign-Up</h2>
-        <form action="https://script.google.com/macros/s/AKfycbyE4GqWUYpghhqd74Jw4r8Svt9ItpcfY-YFbHyPWsOi5xcar7AjJ9Pr0TxrrrAua9Jb/exec" method="post">
-
+        <form
+          action="https://script.google.com/macros/s/AKfycbyE4GqWUYpghhqd74Jw4r8Svt9ItpcfY-YFbHyPWsOi5xcar7AjJ9Pr0TxrrrAua9Jb/exec"
+          method="post"
+        >
           <label for="tutoring-name">Name:</label>
           <input type="text" id="tutoring-name" name="tutoring-name" required />
           <label for="tutoring-email">Email:</label>
@@ -117,8 +144,6 @@
           <button type="submit">Sign Up</button>
         </form>
       </section>
-
-
     </main>
 
     <footer>
@@ -131,15 +156,16 @@
           </div>
           <div class="contact-details">
             <img src="WebNest Images/email.png" alt="Email Icon" />
-            <p><a href="mailto:webnestvach@gmail.com">webnestvach@gmail.com</a></p>
+            <p>
+              <a href="mailto:webnestvach@gmail.com">webnestvach@gmail.com</a>
+            </p>
           </div>
           <div class="contact-details">
             <img src="WebNest Images/location.png" alt="Location Icon" />
             <p>Colonial Heights, VA 23834</p>
           </div>
         </div>
-        <div class="webnest-info">
-        </div>
+        <div class="webnest-info"></div>
       </div>
     </footer>
     <script src="JS/event.js"></script>
