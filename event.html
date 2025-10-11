@@ -3,8 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Event - WebNest</title>
+    <title>Events & Workshops - WebNest</title>
+    <link rel="icon" href="WebNest Images/logo.png" type="image/png" />
     <link rel="stylesheet" href="CSS/event.css" />
+
     <!-- Google tag (gtag.js) -->
     <script
       async
@@ -16,12 +18,11 @@
         dataLayer.push(arguments);
       }
       gtag("js", new Date());
-
       gtag("config", "G-YJBRM1FZQ3");
     </script>
   </head>
   <body>
-    <header>
+    <header id="mainHeader">
       <div class="logo">
         <img src="WebNest Images/logo.png" alt="WebNest Logo" />
         WebNest
@@ -33,6 +34,7 @@
             <ul class="dropdown-content">
               <li><a href="index.html">Home</a></li>
               <li><a href="request.html">Request a Website</a></li>
+              <li><a href="event.html">Events</a></li>
               <li><a href="donation.html">Donate</a></li>
               <li><a href="about.html">About Us</a></li>
               <li><a href="blog.html">Blog</a></li>
@@ -43,131 +45,348 @@
     </header>
 
     <main>
-      <section class="hero">
-        <h1>Upcoming Workshops & Events</h1>
-        <p>
-          Join us for our upcoming workshops, sign up for tutoring sessions, and
-          get involved in our planned events!
-        </p>
-      </section>
-
-      <section class="upcoming-workshops">
-        <h2>Upcoming Workshops</h2>
-        <div class="workshop">
-          <h3>
-            Kids Achieving Progress (KAP) - Introduction to Python for Grades
-            3-5
-          </h3>
+      <!-- Hero Section -->
+      <section class="event-hero">
+        <div class="hero-content">
+          <h1>Events & Workshops</h1>
           <p>
-            Join us for an exciting afterschool workshop where students in
-            grades 3-5 will learn the basics of Python programming. This
-            beginner-friendly workshop will teach kids how to write simple code,
-            understand programming logic, and foster their interest in
-            technology and coding!
-          </p>
-          <p>Date and Time: Every Wednesday in 4:00 PM - 5:00 PM</p>
-          <p>
-            Location: Lakeview Elementary School, Colonial Heights, Virginia
+            Join our community of learners and make a difference through
+            technology
           </p>
         </div>
-        <!-- Add more workshops as needed -->
       </section>
 
-      <section class="planned-events">
-        <h2>Upcoming Events</h2>
-        <div class="event">
-          <h3>Weekly Python Workshop and Computer Science Talks</h3>
-          <p>
-            Join us every Monday for an engaging and interactive online workshop
-            via Google Meet. This session will feature Python programming
-            tutorials and insightful discussions on computer science topics,
-            tailored to inspire and educate participants of all skill levels.
-          </p>
-          <p><strong>Schedule:</strong> Mondays, 3:30 - 5:00</p>
-          <p><strong>Platform:</strong> Google Meet</p>
+      <!-- Stats Section -->
+      <section class="impact-stats">
+        <div class="stat-card">
+          <div class="stat-number">25+</div>
+          <div class="stat-label">Workshop Participants</div>
         </div>
-        <!-- Add more events as needed -->
-      </section>
-      <section class="volunteer-signup">
-        <h2>Volunteer Sign-Up</h2>
-        <form
-          action="https://script.google.com/macros/s/AKfycbxp2rPlWy_v9_7O4mR0u0gexsVWS3KMRBZ8d8gCEI_xhFBdVtlw3EpvckrDKudzl-YfNQ/exec"
-          method="post"
-        >
-          <label for="volunteer-name">Name:</label>
-          <input
-            type="text"
-            id="volunteer-name"
-            name="volunteer-name"
-            required
-          />
-          <label for="volunteer-email">Email:</label>
-          <input
-            type="email"
-            id="volunteer-email"
-            name="volunteer-email"
-            required
-          />
-          <label for="volunteer-event">Event Interested In:</label>
-          <input
-            type="text"
-            id="volunteer-event"
-            name="volunteer-event"
-            required
-          />
-          <button type="submit">Sign Up</button>
-        </form>
+        <div class="stat-card">
+          <div class="stat-number">55+</div>
+          <div class="stat-label">Students Taught Python</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">12+</div>
+          <div class="stat-label">Volunteer Supporters</div>
+        </div>
       </section>
 
-      <section class="tutoring-signup">
-        <h2>Workshop Session Sign-Up</h2>
-        <form
-          action="https://script.google.com/macros/s/AKfycbyE4GqWUYpghhqd74Jw4r8Svt9ItpcfY-YFbHyPWsOi5xcar7AjJ9Pr0TxrrrAua9Jb/exec"
-          method="post"
-        >
-          <label for="tutoring-name">Name:</label>
-          <input type="text" id="tutoring-name" name="tutoring-name" required />
-          <label for="tutoring-email">Email:</label>
-          <input
-            type="email"
-            id="tutoring-email"
-            name="tutoring-email"
-            required
-          />
-          <label for="tutoring-event">Event Interested In:</label>
-          <input
-            type="text"
-            id="tutoring-event"
-            name="tutoring-event"
-            required
-          />
-          <button type="submit">Sign Up</button>
-        </form>
+      <!-- Upcoming Workshops Section -->
+      <section class="upcoming-section">
+        <h2 class="section-title">Upcoming Workshops</h2>
+        <div class="events-grid">
+          <div class="event-card featured">
+            <div class="event-badge">Featured</div>
+            <div class="event-icon">🐍</div>
+            <h3>Kids Achieving Progress (KAP) - Introduction to Python</h3>
+            <p class="event-description">
+              Join us for an exciting afterschool workshop where students in
+              grades 3-5 will learn the basics of Python programming. This
+              beginner-friendly workshop teaches kids how to write simple code,
+              understand programming logic, and foster their interest in
+              technology and coding!
+            </p>
+            <div class="event-details">
+              <div class="detail-item">
+                <span class="detail-icon">📅</span>
+                <span>Every Wednesday, 4:00 PM - 5:00 PM</span>
+              </div>
+              <div class="detail-item">
+                <span class="detail-icon">📍</span>
+                <span>Lakeview Elementary School, Colonial Heights, VA</span>
+              </div>
+              <div class="detail-item">
+                <span class="detail-icon">👥</span>
+                <span>Grades 3-5</span>
+              </div>
+            </div>
+            <button
+              class="event-button"
+              onclick="document.getElementById('tutoring-signup').scrollIntoView({behavior: 'smooth'})"
+            >
+              Sign Up Now
+            </button>
+          </div>
+
+          <div class="event-card">
+            <div class="event-icon">💻</div>
+            <h3>Weekly Python Workshop & CS Talks</h3>
+            <p class="event-description">
+              Join us every Monday for engaging and interactive online workshops
+              via Google Meet. These sessions feature Python programming
+              tutorials and insightful discussions on computer science topics,
+              AI developments, and technology careers tailored to inspire
+              participants of all skill levels.
+            </p>
+            <div class="event-details">
+              <div class="detail-item">
+                <span class="detail-icon">📅</span>
+                <span>Every Monday, 3:30 PM - 5:00 PM</span>
+              </div>
+              <div class="detail-item">
+                <span class="detail-icon">🌐</span>
+                <span>Google Meet (Online)</span>
+              </div>
+              <div class="detail-item">
+                <span class="detail-icon">🎯</span>
+                <span>All Skill Levels Welcome</span>
+              </div>
+            </div>
+            <button
+              class="event-button"
+              onclick="document.getElementById('tutoring-signup').scrollIntoView({behavior: 'smooth'})"
+            >
+              Join Workshop
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Why Join Section -->
+      <section class="why-join-section">
+        <h2 class="section-title">Why Join Our Workshops?</h2>
+        <div class="benefits-grid">
+          <div class="benefit-card">
+            <div class="benefit-icon">🎓</div>
+            <h3>Learn from Experts</h3>
+            <p>
+              Get hands-on experience with web development, Python programming,
+              and cutting-edge technology.
+            </p>
+          </div>
+          <div class="benefit-card">
+            <div class="benefit-icon">🤝</div>
+            <h3>Community Support</h3>
+            <p>
+              Join a network of 12+ volunteers and fellow learners passionate
+              about technology.
+            </p>
+          </div>
+          <div class="benefit-card">
+            <div class="benefit-icon">🚀</div>
+            <h3>Career Insights</h3>
+            <p>
+              Explore AI developments, technology careers, and industry best
+              practices.
+            </p>
+          </div>
+          <div class="benefit-card">
+            <div class="benefit-icon">💡</div>
+            <h3>Hands-On Projects</h3>
+            <p>
+              Build real projects and develop practical skills you can use
+              immediately.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Workshop Sign-Up Section -->
+      <section class="signup-section" id="tutoring-signup">
+        <div class="glass-card">
+          <h2>Workshop Session Sign-Up</h2>
+          <p class="signup-description">
+            Ready to start your learning journey? Sign up for our workshops and
+            join our community of tech enthusiasts!
+          </p>
+          <form
+            action="https://script.google.com/macros/s/AKfycbyE4GqWUYpghhqd74Jw4r8Svt9ItpcfY-YFbHyPWsOi5xcar7AjJ9Pr0TxrrrAua9Jb/exec"
+            method="post"
+            class="signup-form"
+          >
+            <div class="form-row">
+              <div class="form-group">
+                <label for="tutoring-name">Full Name *</label>
+                <input
+                  type="text"
+                  id="tutoring-name"
+                  name="tutoring-name"
+                  required
+                  placeholder="Your full name"
+                />
+              </div>
+              <div class="form-group">
+                <label for="tutoring-email">Email Address *</label>
+                <input
+                  type="email"
+                  id="tutoring-email"
+                  name="tutoring-email"
+                  required
+                  placeholder="your.email@example.com"
+                />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="tutoring-event">Event/Workshop Interested In *</label>
+              <select id="tutoring-event" name="tutoring-event" required>
+                <option value="" disabled selected>Select a workshop</option>
+                <option value="KAP Python - Wednesdays">
+                  KAP Python Workshop (Wednesdays)
+                </option>
+                <option value="Weekly CS Talks - Mondays">
+                  Weekly Python & CS Talks (Mondays)
+                </option>
+                <option value="Both">Both Workshops</option>
+                <option value="General Interest">General Interest</option>
+              </select>
+            </div>
+            <button type="submit" class="submit-button">
+              <span>Sign Up for Workshop</span>
+              <span class="button-arrow">→</span>
+            </button>
+          </form>
+        </div>
+      </section>
+
+      <!-- Volunteer Section -->
+      <section class="volunteer-section" id="volunteer-signup">
+        <div class="glass-card">
+          <h2>Become a Volunteer</h2>
+          <p class="signup-description">
+            Join our team of 12+ dedicated volunteers supporting our mission to
+            empower communities through technology education. Help run
+            workshops, assist with events, or provide mentorship to students.
+          </p>
+          <form
+            action="https://script.google.com/macros/s/AKfycbxp2rPlWy_v9_7O4mR0u0gexsVWS3KMRBZ8d8gCEI_xhFBdVtlw3EpvckrDKudzl-YfNQ/exec"
+            method="post"
+            class="signup-form"
+          >
+            <div class="form-row">
+              <div class="form-group">
+                <label for="volunteer-name">Full Name *</label>
+                <input
+                  type="text"
+                  id="volunteer-name"
+                  name="volunteer-name"
+                  required
+                  placeholder="Your full name"
+                />
+              </div>
+              <div class="form-group">
+                <label for="volunteer-email">Email Address *</label>
+                <input
+                  type="email"
+                  id="volunteer-email"
+                  name="volunteer-email"
+                  required
+                  placeholder="your.email@example.com"
+                />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="volunteer-event">Area of Interest *</label>
+              <select id="volunteer-event" name="volunteer-event" required>
+                <option value="" disabled selected>
+                  How would you like to help?
+                </option>
+                <option value="Workshop Assistant">Workshop Assistant</option>
+                <option value="Tutoring Support">Tutoring Support</option>
+                <option value="Event Coordination">Event Coordination</option>
+                <option value="Technical Support">Technical Support</option>
+                <option value="General Volunteering">
+                  General Volunteering
+                </option>
+              </select>
+            </div>
+            <button type="submit" class="submit-button volunteer-btn">
+              <span>Join as Volunteer</span>
+              <span class="button-arrow">→</span>
+            </button>
+          </form>
+        </div>
+      </section>
+
+      <!-- Call to Action -->
+      <section class="cta-section">
+        <div class="cta-content">
+          <h2>Have Questions?</h2>
+          <p>
+            Want to learn more about our workshops or discuss custom training
+            for your organization? We'd love to hear from you!
+          </p>
+          <button
+            class="cta-button"
+            onclick="window.location.href='about.html'"
+          >
+            Contact Us
+            <span class="arrow">→</span>
+          </button>
+        </div>
       </section>
     </main>
 
     <footer>
       <div class="footer-content">
-        <div class="contact-info">
-          <h2>Contact</h2>
-          <div class="contact-details">
-            <img src="WebNest Images/phone.png" alt="Phone Icon" />
-            <p><a href="tel:+18049314474">804-931-4474</a></p>
+        <div class="footer-section">
+          <h3>Contact Us</h3>
+          <div class="contact-item">
+            <img src="WebNest Images/phone.png" alt="Phone" />
+            <a href="tel:+18049314474">804-931-4474</a>
           </div>
-          <div class="contact-details">
-            <img src="WebNest Images/email.png" alt="Email Icon" />
-            <p>
-              <a href="mailto:webnestvach@gmail.com">webnestvach@gmail.com</a>
-            </p>
+          <div class="contact-item">
+            <img src="WebNest Images/email.png" alt="Email" />
+            <a href="mailto:webnestchva@gmail.com">webnestchva@gmail.com</a>
           </div>
-          <div class="contact-details">
-            <img src="WebNest Images/location.png" alt="Location Icon" />
-            <p>Colonial Heights, VA 23834</p>
+          <div class="contact-item">
+            <img src="WebNest Images/location.png" alt="Location" />
+            <span>Colonial Heights, VA 23834</span>
           </div>
         </div>
-        <div class="webnest-info"></div>
+
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <a href="index.html">Home</a>
+          <a href="request.html">Request Website</a>
+          <a href="donation.html">Donate</a>
+          <a href="about.html">About Us</a>
+        </div>
+
+        <div class="footer-branding">
+          <div class="logo">
+            <img src="WebNest Images/logo.png" alt="WebNest Logo" />
+            WebNest
+          </div>
+          <p>Empowering communities through technology</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 WebNest Nonprofit. All rights reserved.</p>
       </div>
     </footer>
+
     <script src="JS/event.js"></script>
+    <script>
+      // Header scroll effect
+      window.addEventListener("scroll", function () {
+        const header = document.getElementById("mainHeader");
+        if (window.scrollY > 50) {
+          header.classList.add("scrolled");
+        } else {
+          header.classList.remove("scrolled");
+        }
+      });
+
+      // Intersection Observer for animations
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px",
+      };
+
+      const observer = new IntersectionObserver(function (entries) {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("animate-in");
+          }
+        });
+      }, observerOptions);
+
+      document
+        .querySelectorAll(".event-card, .benefit-card, .stat-card, .glass-card")
+        .forEach((el) => {
+          observer.observe(el);
+        });
+    </script>
   </body>
 </html>
