@@ -4,7 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Blog - WebNest</title>
+    <link rel="icon" href="WebNest Images/logo.png" type="image/png" />
     <link rel="stylesheet" href="CSS/blog.css" />
+
     <!-- Google tag (gtag.js) -->
     <script
       async
@@ -16,12 +18,11 @@
         dataLayer.push(arguments);
       }
       gtag("js", new Date());
-
       gtag("config", "G-YJBRM1FZQ3");
     </script>
   </head>
   <body>
-    <header>
+    <header id="mainHeader">
       <div class="logo">
         <img src="WebNest Images/logo.png" alt="WebNest Logo" />
         WebNest
@@ -33,7 +34,7 @@
             <ul class="dropdown-content">
               <li><a href="index.html">Home</a></li>
               <li><a href="request.html">Request a Website</a></li>
-              <li><a href="event.html">Event</a></li>
+              <li><a href="event.html">Events</a></li>
               <li><a href="donation.html">Donate</a></li>
               <li><a href="about.html">About Us</a></li>
               <li><a href="blog.html">Blog</a></li>
@@ -42,101 +43,292 @@
         </ul>
       </nav>
     </header>
-    <main>
-      <section class="hero">
-        <h1>Welcome to the WebNest Blog</h1>
-        <p>Stay updated with our latest news, tips, and success stories.</p>
-      </section>
-      <aside class="sidebar">
-        <h2>Search</h2>
-        <div class="search-container">
-          <input type="text" placeholder="Search..." />
-          <button type="submit" class="search-button">
-            <img src="WebNest Images/search-icon.png" alt="Search Icon" />
-          </button>
-        </div>
 
-        <h2>Categories</h2>
-        <ul class="categories">
-          <li><a href="#">Web Development</a></li>
-          <li><a href="#">Small Business Tips</a></li>
-          <li><a href="#">Success Stories</a></li>
-          <li><a href="#">Announcements</a></li>
-        </ul>
-      </aside>
-      <section class="featured-post">
-        <h2>Featured Post</h2>
-        <div class="post">
-          <img src="WebNest Images/blog3.jpg" alt="Featured Post Image" />
-          <h3>The Impacts of WebNest and The Art and Science of Programming</h3>
-          <p>
-            Written by Munif Ahmed, this post highlights the transformative
-            effects of WebNest's programming initiatives at KAP Lakeview
-            Elementary and the outreach efforts of Andy Yang’s *The Art and
-            Science of Programming*. Discover how accessible programming
-            education is inspiring young learners and fostering a passion for
-            technology.
-          </p>
-          <a href="blog/blog3.html" class="read-more">Read More</a>
+    <main>
+      <!-- Hero Section -->
+      <section class="blog-hero">
+        <div class="hero-content">
+          <h1>WebNest Blog</h1>
+          <p>Insights, stories, and tech news from our community</p>
         </div>
       </section>
-      <section class="blog-list">
-        <h2>Recent Posts</h2>
-        <div class="post">
-          <img src="WebNest Images/blog1.jpg" alt="Post Image" />
-          <h3>
-            How WebNest is Revolutionizing Small Businesses: A Success Story
-            from Top's China
-          </h3>
-          <p>
-            Written by Ethan Greenwald, this post delves into the inspiring
-            journey of Top's China, a family-owned restaurant that partnered
-            with WebNest to embrace digital transformation. Learn how a
-            professional website and online tools boosted their sales by 40% and
-            earned them the #1 DoorDash ranking in their region.
-          </p>
-          <a href="blog/blog1.html" class="read-more">Read More</a>
-        </div>
-        <div class="post">
-          <img src="WebNest Images/blog2.webp" alt="Post Image" />
-          <h3>
-            VisuAI: Pioneering New Frontiers of Accessibility through Innovation
-          </h3>
-          <p>
-            Written by Anthony Sanjurjo Mercado, this post showcases the
-            groundbreaking work of two high school students who developed
-            VisuAI, an AI-powered app for real-time object detection and audio
-            descriptions. Discover how this innovation is empowering the
-            visually impaired and gaining national recognition.
-          </p>
-          <a href="blog/blog2.html" class="read-more">Read More</a>
-        </div>
-      </section>
-    </main>
-    <footer>
-      <div class="footer-content">
-        <div class="contact-info">
-          <h2>Contact</h2>
-          <div class="contact-details">
-            <img src="WebNest Images/phone.png" alt="Phone Icon" />
-            <p><a href="tel:+18049314474">804-931-4474</a></p>
+
+      <div class="blog-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+          <div class="sidebar-card">
+            <h2>Search</h2>
+            <div class="search-container">
+              <input
+                type="text"
+                placeholder="Search articles..."
+                id="searchInput"
+              />
+              <button type="button" class="search-button">
+                <svg viewBox="0 0 24 24" width="20" height="20">
+                  <path
+                    fill="currentColor"
+                    d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"
+                  />
+                </svg>
+              </button>
+            </div>
           </div>
-          <div class="contact-details">
-            <img src="WebNest Images/email.png" alt="Email Icon" />
-            <p>
-              <a href="mailto:webnestchva@gmail.com">webnestchva@gmail.com</a>
-            </p>
+
+          <div class="sidebar-card">
+            <h2>Categories</h2>
+            <ul class="categories">
+              <li>
+                <a href="#" data-category="web-development">Web Development</a>
+              </li>
+              <li>
+                <a href="#" data-category="success-stories">Success Stories</a>
+              </li>
+              <li>
+                <a href="#" data-category="innovation">Innovation & AI</a>
+              </li>
+              <li><a href="#" data-category="education">Education</a></li>
+              <li>
+                <a href="#" data-category="community">Community Impact</a>
+              </li>
+            </ul>
           </div>
-          <div class="contact-details">
-            <img src="WebNest Images/location.png" alt="Location Icon" />
-            <p>Colonial Heights, VA 23834</p>
+
+          <div class="sidebar-card">
+            <h2>Recent Posts</h2>
+            <div class="recent-posts">
+              <a href="blog/blog3.html" class="recent-post-item">
+                <span class="post-title">WebNest & Programming Education</span>
+                <span class="post-date">Recent</span>
+              </a>
+              <a href="blog/blog1.html" class="recent-post-item">
+                <span class="post-title">Top's China Success Story</span>
+                <span class="post-date">Recent</span>
+              </a>
+              <a href="blog/blog2.html" class="recent-post-item">
+                <span class="post-title">VisuAI Accessibility Innovation</span>
+                <span class="post-date">Recent</span>
+              </a>
+            </div>
           </div>
-        </div>
-        <div class="webnest-info">
-          <!-- Add any additional information or links here -->
+        </aside>
+
+        <!-- Main Content -->
+        <div class="blog-content">
+          <!-- Featured Post -->
+          <section class="featured-section">
+            <h2 class="section-title">Editor's Pick</h2>
+            <article class="featured-post">
+              <div class="featured-image">
+                <img
+                  src="WebNest Images/blog3.jpg"
+                  alt="Programming Education Impact"
+                />
+                <div class="image-overlay">
+                  <span class="category-tag">Education</span>
+                </div>
+              </div>
+              <div class="featured-content">
+                <h3>
+                  The Impacts of WebNest and The Art and Science of Programming
+                </h3>
+                <div class="post-meta">
+                  <span class="author">✍️ Munif Ahmed</span>
+                  <span class="read-time">📖 5 min read</span>
+                </div>
+                <p>
+                  This post highlights the transformative effects of WebNest's
+                  programming initiatives at KAP Lakeview Elementary and the
+                  outreach efforts of Andy Yang's
+                  <em>The Art and Science of Programming</em>. Discover how
+                  accessible programming education is inspiring young learners
+                  and fostering a passion for technology.
+                </p>
+                <a href="blog/blog3.html" class="read-more-btn">
+                  Read Full Article
+                  <span class="arrow">→</span>
+                </a>
+              </div>
+            </article>
+          </section>
+
+          <!-- Recent Posts -->
+          <section class="recent-section">
+            <h2 class="section-title">Latest Articles</h2>
+            <div class="blog-grid">
+              <article class="blog-card">
+                <div class="blog-image">
+                  <img
+                    src="WebNest Images/blog1.jpg"
+                    alt="Top's China Restaurant"
+                  />
+                  <div class="image-overlay">
+                    <span class="category-tag">Success Story</span>
+                  </div>
+                </div>
+                <div class="blog-card-content">
+                  <h3>How WebNest is Revolutionizing Small Businesses</h3>
+                  <div class="post-meta">
+                    <span class="author">✍️ Ethan Greenwald</span>
+                    <span class="read-time">📖 4 min read</span>
+                  </div>
+                  <p>
+                    Dive into the inspiring journey of Top's China, a
+                    family-owned restaurant that partnered with WebNest to
+                    embrace digital transformation. Learn how a professional
+                    website boosted their sales by 40% and earned them the #1
+                    DoorDash ranking.
+                  </p>
+                  <a href="blog/blog1.html" class="read-more-link">
+                    Read More
+                    <span class="arrow">→</span>
+                  </a>
+                </div>
+              </article>
+
+              <article class="blog-card">
+                <div class="blog-image">
+                  <img
+                    src="WebNest Images/blog2.webp"
+                    alt="VisuAI Innovation"
+                  />
+                  <div class="image-overlay">
+                    <span class="category-tag">Innovation</span>
+                  </div>
+                </div>
+                <div class="blog-card-content">
+                  <h3>VisuAI: Pioneering New Frontiers of Accessibility</h3>
+                  <div class="post-meta">
+                    <span class="author">✍️ Anthony Sanjurjo Mercado</span>
+                    <span class="read-time">📖 6 min read</span>
+                  </div>
+                  <p>
+                    Discover the groundbreaking work of two high school students
+                    who developed VisuAI, an AI-powered app for real-time object
+                    detection and audio descriptions. See how this innovation is
+                    empowering the visually impaired and gaining national
+                    recognition.
+                  </p>
+                  <a href="blog/blog2.html" class="read-more-link">
+                    Read More
+                    <span class="arrow">→</span>
+                  </a>
+                </div>
+              </article>
+            </div>
+          </section>
+
+          <!-- Newsletter Signup -->
+          <section class="newsletter-section">
+            <div class="newsletter-card">
+              <div class="newsletter-icon">📬</div>
+              <h3>Stay Updated</h3>
+              <p>
+                Subscribe to our newsletter for the latest stories, tech tips,
+                and community updates.
+              </p>
+              <form class="newsletter-form">
+                <input type="email" placeholder="Enter your email" required />
+                <button type="submit">Subscribe</button>
+              </form>
+            </div>
+          </section>
         </div>
       </div>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Contact Us</h3>
+          <div class="contact-item">
+            <img src="WebNest Images/phone.png" alt="Phone" />
+            <a href="tel:+18049314474">804-931-4474</a>
+          </div>
+          <div class="contact-item">
+            <img src="WebNest Images/email.png" alt="Email" />
+            <a href="mailto:webnestchva@gmail.com">webnestchva@gmail.com</a>
+          </div>
+          <div class="contact-item">
+            <img src="WebNest Images/location.png" alt="Location" />
+            <span>Colonial Heights, VA 23834</span>
+          </div>
+        </div>
+
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <a href="index.html">Home</a>
+          <a href="request.html">Request Website</a>
+          <a href="event.html">Events</a>
+          <a href="donation.html">Donate</a>
+          <a href="about.html">About Us</a>
+        </div>
+
+        <div class="footer-branding">
+          <div class="logo">
+            <img src="WebNest Images/logo.png" alt="WebNest Logo" />
+            WebNest
+          </div>
+          <p>Empowering communities through technology</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 WebNest Nonprofit. All rights reserved.</p>
+      </div>
     </footer>
+
     <script src="JS/blog.js"></script>
+    <script>
+      // Header scroll effect
+      window.addEventListener("scroll", function () {
+        const header = document.getElementById("mainHeader");
+        if (window.scrollY > 50) {
+          header.classList.add("scrolled");
+        } else {
+          header.classList.remove("scrolled");
+        }
+      });
+
+      // Intersection Observer for animations
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px",
+      };
+
+      const observer = new IntersectionObserver(function (entries) {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("animate-in");
+          }
+        });
+      }, observerOptions);
+
+      document
+        .querySelectorAll(".blog-card, .featured-post, .sidebar-card")
+        .forEach((el) => {
+          observer.observe(el);
+        });
+
+      // Simple search functionality
+      document
+        .getElementById("searchInput")
+        .addEventListener("input", function (e) {
+          const searchTerm = e.target.value.toLowerCase();
+          const blogCards = document.querySelectorAll(
+            ".blog-card, .featured-post"
+          );
+
+          blogCards.forEach((card) => {
+            const title = card.querySelector("h3").textContent.toLowerCase();
+            const content = card.querySelector("p").textContent.toLowerCase();
+
+            if (title.includes(searchTerm) || content.includes(searchTerm)) {
+              card.style.display = "block";
+            } else {
+              card.style.display = searchTerm ? "none" : "block";
+            }
+          });
+        });
+    </script>
   </body>
 </html>
