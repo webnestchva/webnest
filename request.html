@@ -4,9 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Request a Website - WebNest</title>
+    <meta
+      name="description"
+      content="Request a professional, custom website for your business from WebNest. Our team provides free web design and development services for small businesses."
+    />
+    <link rel="icon" href="WebNest Images/logo.png" type="image/png" />
     <link rel="stylesheet" href="CSS/request.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="JS/request.js"></script>
+
     <!-- Google tag (gtag.js) -->
     <script
       async
@@ -18,15 +23,14 @@
         dataLayer.push(arguments);
       }
       gtag("js", new Date());
-
       gtag("config", "G-YJBRM1FZQ3");
     </script>
   </head>
   <body>
-    <header>
+    <header id="mainHeader">
       <div class="logo">
         <img src="WebNest Images/logo.png" alt="WebNest Logo" />
-        WebNest
+        <span>WebNest</span>
       </div>
       <nav>
         <ul>
@@ -35,7 +39,7 @@
             <ul class="dropdown-content">
               <li><a href="index.html">Home</a></li>
               <li><a href="request.html">Request a Website</a></li>
-              <li><a href="event.html">Event</a></li>
+              <li><a href="event.html">Events</a></li>
               <li><a href="donation.html">Donate</a></li>
               <li><a href="about.html">About Us</a></li>
               <li><a href="blog.html">Blog</a></li>
@@ -44,86 +48,355 @@
         </ul>
       </nav>
     </header>
+
     <main>
-      <section class="request-section">
-        <h2>Request a Website</h2>
-        <p class="instructions">
-          Please fill out the form below to request a custom website for your
-          business. Provide as much detail as possible to help us understand
-          your needs.
-        </p>
-        <form id="request-form">
-          <label for="name">Name:</label>
-          <input type="text" id="name" name="name" required /><br />
-
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email" required /><br />
-
-          <label for="phone">Phone:</label>
-          <input type="tel" id="phone" name="phone" required /><br />
-
-          <label for="business-name">Business Name:</label>
-          <input
-            type="text"
-            id="business-name"
-            name="business-name"
-            required
-          /><br />
-
-          <label for="website-type">Type of Website:</label>
-          <select id="website-type" name="website-type" required>
-            <option value="" disabled selected>Select an option</option>
-            <option value="personal">Personal</option>
-            <option value="business">Business</option>
-            <option value="e-commerce">E-commerce</option>
-            <option value="portfolio">Portfolio</option>
-            <option value="blog">Blog</option>
-            <option value="educational">Educational</option>
-            <option value="nonprofit">Nonprofit</option>
-            <option value="other">Other</option></select
-          ><br />
-
-          <input
-            type="text"
-            id="other-website-type"
-            name="other-website-type"
-            placeholder="Please specify"
-            style="display: none"
-          /><br />
-
-          <label for="description">Description:</label>
-          <textarea id="description" name="description" required></textarea
-          ><br />
-
-          <br />
-          <label for="deadline">Preferred Deadline:</label>
-          <input type="date" id="deadline" name="deadline" required /><br />
-
-          <button type="submit">Submit Request</button>
-        </form>
+      <section class="request-hero">
+        <div class="hero-content">
+          <h1>Request Your Free Website</h1>
+          <p>Let us build your digital presence at no cost</p>
+        </div>
       </section>
-    </main>
-    <footer>
-      <div class="footer-content">
-        <div class="contact-info">
-          <h2>Contact</h2>
-          <div class="contact-details">
-            <img src="WebNest Images/phone.png" alt="Phone Icon" />
-            <p><a href="tel:+18049314474">804-931-4474</a></p>
-          </div>
-          <div class="contact-details">
-            <img src="WebNest Images/email.png" alt="Email Icon" />
-            <p>
-              <a href="mailto:webnestchva@gmail.com">webnestchva@gmail.com</a>
+
+      <section class="request-section">
+        <div class="glass-card">
+          <div class="section-header">
+            <h2>Get Started Today</h2>
+            <p class="instructions">
+              Fill out the form below to request a custom website for your
+              business or organization. Our team will create a professional
+              website tailored to your needs at no cost. We'll reach out within
+              two business days.
             </p>
           </div>
-          <div class="contact-details">
-            <img src="WebNest Images/location.png" alt="Location Icon" />
-            <p>Colonial Heights, VA 23834</p>
+
+          <div class="form-progress">
+            <div class="progress-bar"></div>
+          </div>
+
+          <form id="request-form">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Full Name *</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  required
+                  placeholder="John Smith"
+                />
+                <div class="error-message">Please enter your full name</div>
+              </div>
+
+              <div class="form-group">
+                <label for="email">Email Address *</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  placeholder="john@example.com"
+                />
+                <div class="error-message">Please enter a valid email</div>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="phone">Phone Number *</label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  required
+                  placeholder="(804) 555-0123"
+                />
+                <div class="error-message">
+                  Please enter a valid phone number
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="business-name">Business/Organization Name *</label>
+                <input
+                  type="text"
+                  id="business-name"
+                  name="business-name"
+                  required
+                  placeholder="Your Business Name"
+                />
+                <div class="error-message">Please enter your business name</div>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="website-type">Type of Website *</label>
+                <select id="website-type" name="website-type" required>
+                  <option value="" disabled selected>
+                    Select website type
+                  </option>
+                  <option value="personal">Personal</option>
+                  <option value="business">Business</option>
+                  <option value="e-commerce">E-commerce</option>
+                  <option value="portfolio">Portfolio</option>
+                  <option value="blog">Blog</option>
+                  <option value="educational">Educational</option>
+                  <option value="nonprofit">Nonprofit</option>
+                  <option value="other">Other</option>
+                </select>
+                <div class="error-message">Please select a website type</div>
+              </div>
+
+              <div
+                class="form-group"
+                id="other-website-type-container"
+                style="display: none"
+              >
+                <label for="other-website-type">Specify Website Type</label>
+                <input
+                  type="text"
+                  id="other-website-type"
+                  name="other-website-type"
+                  placeholder="Please specify"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="deadline">Preferred Deadline *</label>
+                <input type="date" id="deadline" name="deadline" required />
+                <div class="error-message">Please select a deadline</div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="description">Project Description *</label>
+              <textarea
+                id="description"
+                name="description"
+                required
+                placeholder="Tell us about your project, including any specific features or requirements you have for your website..."
+              ></textarea>
+              <div class="error-message">Please describe your project</div>
+            </div>
+
+            <button type="submit" class="submit-button">
+              <span class="button-text">Submit Request</span>
+              <span class="button-icon">→</span>
+            </button>
+          </form>
+        </div>
+      </section>
+
+      <section class="features-section">
+        <h2 class="section-title">What You Get</h2>
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon">💰</div>
+            <h3>Completely Free</h3>
+            <p>
+              We design and develop professional websites at no cost to help
+              small businesses and organizations establish their online
+              presence.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">📱</div>
+            <h3>Mobile Responsive</h3>
+            <p>
+              All our websites are fully responsive and optimized for all
+              devices, ensuring your site looks great on desktops, tablets, and
+              smartphones.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">🎨</div>
+            <h3>Custom Design</h3>
+            <p>
+              We create tailored designs that match your brand identity and
+              business goals, not generic templates.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">⚡</div>
+            <h3>Fast & Optimized</h3>
+            <p>
+              Your website will be built with performance in mind, ensuring
+              quick load times and smooth user experience.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">🔒</div>
+            <h3>Secure & Reliable</h3>
+            <p>
+              We implement best security practices and reliable hosting to keep
+              your website safe and always accessible.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">🤝</div>
+            <h3>Ongoing Support</h3>
+            <p>
+              We provide continued support and guidance to help you maintain and
+              grow your online presence.
+            </p>
           </div>
         </div>
-        <div class="webnest-info"></div>
+      </section>
+
+      <section class="process-section">
+        <h2 class="section-title">Our Process</h2>
+        <div class="process-timeline">
+          <div class="process-step">
+            <div class="step-number">01</div>
+            <h3>Submit Request</h3>
+            <p>
+              Fill out our simple form with your project details and
+              requirements.
+            </p>
+          </div>
+
+          <div class="process-step">
+            <div class="step-number">02</div>
+            <h3>Initial Consultation</h3>
+            <p>
+              We'll reach out within 2 business days to discuss your vision and
+              goals.
+            </p>
+          </div>
+
+          <div class="process-step">
+            <div class="step-number">03</div>
+            <h3>Design & Development</h3>
+            <p>
+              Our team creates your custom website with regular updates and
+              feedback.
+            </p>
+          </div>
+
+          <div class="process-step">
+            <div class="step-number">04</div>
+            <h3>Launch & Support</h3>
+            <p>
+              We launch your site and provide ongoing support to ensure your
+              success.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Contact Us</h3>
+          <div class="contact-item">
+            <img src="WebNest Images/phone.png" alt="Phone" />
+            <a href="tel:+18049314474">804-931-4474</a>
+          </div>
+          <div class="contact-item">
+            <img src="WebNest Images/email.png" alt="Email" />
+            <a href="mailto:webnestchva@gmail.com">webnestchva@gmail.com</a>
+          </div>
+          <div class="contact-item">
+            <img src="WebNest Images/location.png" alt="Location" />
+            <span>Colonial Heights, VA 23834</span>
+          </div>
+        </div>
+
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <a href="index.html">Home</a>
+          <a href="event.html">Events</a>
+          <a href="donation.html">Donate</a>
+          <a href="about.html">About Us</a>
+        </div>
+
+        <div class="footer-branding">
+          <div class="logo">
+            <img src="WebNest Images/logo.png" alt="WebNest Logo" />
+            <span>WebNest</span>
+          </div>
+          <p>Empowering communities through technology</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 WebNest Nonprofit. All rights reserved.</p>
       </div>
     </footer>
+
+    <script src="JS/request.js"></script>
+    <script>
+      // Header scroll effect
+      window.addEventListener("scroll", function () {
+        const header = document.getElementById("mainHeader");
+        if (window.scrollY > 50) {
+          header.classList.add("scrolled");
+        } else {
+          header.classList.remove("scrolled");
+        }
+      });
+
+      // Show/hide "Other" website type field
+      document
+        .getElementById("website-type")
+        .addEventListener("change", function () {
+          const otherContainer = document.getElementById(
+            "other-website-type-container"
+          );
+          if (this.value === "other") {
+            otherContainer.style.display = "block";
+          } else {
+            otherContainer.style.display = "none";
+          }
+        });
+
+      // Form progress bar
+      const form = document.getElementById("request-form");
+      const progressBar = document.querySelector(".progress-bar");
+      const formInputs = form.querySelectorAll(
+        "input[required], select[required], textarea[required]"
+      );
+
+      function updateProgress() {
+        let filledFields = 0;
+        formInputs.forEach((input) => {
+          if (input.value.trim() !== "") {
+            filledFields++;
+          }
+        });
+        const progress = (filledFields / formInputs.length) * 100;
+        progressBar.style.width = progress + "%";
+      }
+
+      formInputs.forEach((input) => {
+        input.addEventListener("input", updateProgress);
+        input.addEventListener("change", updateProgress);
+      });
+
+      // Intersection Observer for animations
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px",
+      };
+
+      const observer = new IntersectionObserver(function (entries) {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("animate-in");
+          }
+        });
+      }, observerOptions);
+
+      document
+        .querySelectorAll(".feature-card, .process-step")
+        .forEach((el) => {
+          observer.observe(el);
+        });
+    </script>
   </body>
 </html>
