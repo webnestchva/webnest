@@ -4,7 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Donate - WebNest</title>
+    <link rel="icon" href="WebNest Images/logo.png" type="image/png" />
     <link rel="stylesheet" href="CSS/donation.css" />
+
     <!-- Google tag (gtag.js) -->
     <script
       async
@@ -16,36 +18,11 @@
         dataLayer.push(arguments);
       }
       gtag("js", new Date());
-
       gtag("config", "G-YJBRM1FZQ3");
     </script>
-    <style>
-      .donation-section {
-        text-align: center;
-        background: #007ba1;
-        padding: 50px 20px;
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      }
-      .donation-section h2 {
-        font-size: 2em;
-        color: #00d8ff;
-        margin-bottom: 20px;
-      }
-      .donation-iframe {
-        display: flex;
-        justify-content: center;
-        margin-top: 30px;
-      }
-      iframe[name="donateFrame"] {
-        max-width: 100%;
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      }
-    </style>
   </head>
   <body>
-    <header>
+    <header id="mainHeader">
       <div class="logo">
         <img src="WebNest Images/logo.png" alt="WebNest Logo" />
         WebNest
@@ -66,53 +43,238 @@
         </ul>
       </nav>
     </header>
+
     <main>
-      <section class="donation-section">
-        <h2>Support Our Mission</h2>
-        <p>
-          Your donations help us provide essential digital resources and
-          education to small businesses, workshops, events, and tech
-          organizations. Every dollar goes directly back to the community to
-          foster growth and innovation.
-        </p>
-        <div class="donation-iframe">
-          <iframe
-            src="https://hcb.hackclub.com/donations/start/webnest"
-            style="border: none"
-            name="donateFrame"
-            scrolling="yes"
-            frameborder="0"
-            marginheight="0px"
-            marginwidth="0px"
-            height="512px"
-            width="512px"
-            allowfullscreen
-          ></iframe>
+      <section class="donation-hero">
+        <div class="hero-content">
+          <h1>Support Our Mission</h1>
+          <p>
+            Help us bridge the digital divide and empower communities through
+            technology
+          </p>
+        </div>
+      </section>
+
+      <section class="donation-impact">
+        <div class="glass-card">
+          <h2>Your Impact</h2>
+          <p class="impact-description">
+            Your donations help us provide essential digital resources and
+            education to small businesses, workshops, events, and tech
+            organizations. Every dollar goes directly back to the community to
+            foster growth and innovation.
+          </p>
+
+          <div class="impact-grid">
+            <div class="impact-item">
+              <div class="impact-icon">🌐</div>
+              <h3>Free Websites</h3>
+              <p>Fund custom website development for small businesses</p>
+            </div>
+
+            <div class="impact-item">
+              <div class="impact-icon">📚</div>
+              <h3>Education Programs</h3>
+              <p>Support workshops and Python coding classes for students</p>
+            </div>
+
+            <div class="impact-item">
+              <div class="impact-icon">💻</div>
+              <h3>Tech Resources</h3>
+              <p>Provide devices and accessories to underserved communities</p>
+            </div>
+
+            <div class="impact-item">
+              <div class="impact-icon">🎓</div>
+              <h3>Community Events</h3>
+              <p>Enable seminars, conventions, and learning opportunities</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="donation-form-section">
+        <div class="donation-container">
+          <div class="donation-content">
+            <h2>Make a Difference Today</h2>
+            <p>
+              Join our mission to empower small businesses and provide
+              technology education to the next generation. Your contribution
+              helps us create lasting impact in our community.
+            </p>
+
+            <div class="donation-stats">
+              <div class="stat-box">
+                <div class="stat-number">16+</div>
+                <div class="stat-label">Websites Built</div>
+              </div>
+              <div class="stat-box">
+                <div class="stat-number">55+</div>
+                <div class="stat-label">Students Taught</div>
+              </div>
+              <div class="stat-box">
+                <div class="stat-number">$36K+</div>
+                <div class="stat-label">Reinvested</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="donation-iframe-wrapper">
+            <div class="iframe-glow"></div>
+            <iframe
+              src="https://hcb.hackclub.com/donations/start/webnest"
+              name="donateFrame"
+              scrolling="yes"
+              frameborder="0"
+              marginheight="0"
+              marginwidth="0"
+              height="512px"
+              width="512px"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+      </section>
+
+      <section class="donation-testimonial">
+        <div class="glass-card testimonial-content">
+          <div class="quote-icon">"</div>
+          <blockquote>
+            <p>
+              WebNest transformed our restaurant's online presence completely.
+              The free website they built helped us achieve a 40% increase in
+              sales and secure the #1 DoorDash ranking in our region. Their
+              dedication to helping small businesses is remarkable.
+            </p>
+            <footer>
+              <strong>Top's China Restaurant</strong>
+              <span>Client Success Story</span>
+            </footer>
+          </blockquote>
+        </div>
+      </section>
+
+      <section class="donation-ways">
+        <h2 class="section-title">Other Ways to Support</h2>
+        <div class="ways-grid">
+          <div class="way-card">
+            <div class="way-icon">🙋</div>
+            <h3>Volunteer</h3>
+            <p>
+              Share your skills and time by volunteering at our workshops,
+              tutoring sessions, or community events.
+            </p>
+            <button
+              class="secondary-button"
+              onclick="window.location.href='event.html#volunteer-signup'"
+            >
+              Become a Volunteer
+            </button>
+          </div>
+
+          <div class="way-card">
+            <div class="way-icon">🤝</div>
+            <h3>Partner With Us</h3>
+            <p>
+              Collaborate with WebNest to expand our reach and impact in the
+              tech education space.
+            </p>
+            <button
+              class="secondary-button"
+              onclick="window.location.href='about.html'"
+            >
+              Learn About Partnerships
+            </button>
+          </div>
+
+          <div class="way-card">
+            <div class="way-icon">📢</div>
+            <h3>Spread the Word</h3>
+            <p>
+              Help us grow by sharing our mission with businesses and
+              individuals who could benefit.
+            </p>
+            <button
+              class="secondary-button"
+              onclick="window.location.href='about.html'"
+            >
+              Share Our Story
+            </button>
+          </div>
         </div>
       </section>
     </main>
+
     <footer>
       <div class="footer-content">
-        <div class="contact-info">
-          <h2>Contact</h2>
-          <div class="contact-details">
-            <img src="WebNest Images/phone.png" alt="Phone Icon" />
-            <p><a href="tel:+18049314474">804-931-4474</a></p>
+        <div class="footer-section">
+          <h3>Contact Us</h3>
+          <div class="contact-item">
+            <img src="WebNest Images/phone.png" alt="Phone" />
+            <a href="tel:+18049314474">804-931-4474</a>
           </div>
-          <div class="contact-details">
-            <img src="WebNest Images/email.png" alt="Email Icon" />
-            <p>
-              <a href="mailto:webnestchva@gmail.com">webnestchva@gmail.com</a>
-            </p>
+          <div class="contact-item">
+            <img src="WebNest Images/email.png" alt="Email" />
+            <a href="mailto:webnestchva@gmail.com">webnestchva@gmail.com</a>
           </div>
-          <div class="contact-details">
-            <img src="WebNest Images/location.png" alt="Location Icon" />
-            <p>Colonial Heights, VA 23834</p>
+          <div class="contact-item">
+            <img src="WebNest Images/location.png" alt="Location" />
+            <span>Colonial Heights, VA 23834</span>
           </div>
         </div>
-        <div class="webnest-info"></div>
+
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <a href="index.html">Home</a>
+          <a href="request.html">Request Website</a>
+          <a href="event.html">Events</a>
+          <a href="about.html">About Us</a>
+        </div>
+
+        <div class="footer-branding">
+          <div class="logo">
+            <img src="WebNest Images/logo.png" alt="WebNest Logo" />
+            WebNest
+          </div>
+          <p>Empowering communities through technology</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 WebNest Nonprofit. All rights reserved.</p>
       </div>
     </footer>
+
     <script src="JS/donation.js"></script>
+    <script>
+      // Header scroll effect
+      window.addEventListener("scroll", function () {
+        const header = document.getElementById("mainHeader");
+        if (window.scrollY > 50) {
+          header.classList.add("scrolled");
+        } else {
+          header.classList.remove("scrolled");
+        }
+      });
+
+      // Intersection Observer for animations
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px",
+      };
+
+      const observer = new IntersectionObserver(function (entries) {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("animate-in");
+          }
+        });
+      }, observerOptions);
+
+      document
+        .querySelectorAll(".impact-item, .way-card, .stat-box")
+        .forEach((el) => {
+          observer.observe(el);
+        });
+    </script>
   </body>
 </html>
