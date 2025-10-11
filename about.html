@@ -4,7 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About Us - WebNest</title>
+    <link rel="icon" href="WebNest Images/logo.png" type="image/png" />
     <link rel="stylesheet" href="CSS/about.css" />
+
     <!-- Google tag (gtag.js) -->
     <script
       async
@@ -16,12 +18,11 @@
         dataLayer.push(arguments);
       }
       gtag("js", new Date());
-
       gtag("config", "G-YJBRM1FZQ3");
     </script>
   </head>
   <body>
-    <header>
+    <header id="mainHeader">
       <div class="logo">
         <img src="WebNest Images/logo.png" alt="WebNest Logo" />
         WebNest
@@ -42,303 +43,423 @@
         </ul>
       </nav>
     </header>
-    <main id="about-us-page">
-      <section class="content-section about-webnest hero">
-        <div class="box">
-          <h2>About WebNest</h2>
+
+    <main>
+      <!-- Hero Section -->
+      <section class="about-hero">
+        <div class="hero-content">
+          <h1>About WebNest</h1>
           <p>
-            WebNest is dedicated to helping small businesses establish an online
-            presence.
+            Empowering communities through technology, one website at a time
           </p>
         </div>
       </section>
-      <section class="content-section mission">
-        <div class="box">
+
+      <!-- Mission Section -->
+      <section class="mission-section">
+        <div class="glass-card">
+          <div class="icon-wrapper">🎯</div>
           <h2>Our Mission</h2>
           <p>
             Our mission is to provide digital resources and web development
-            education to our community.
+            education to our community. We believe in bridging the digital
+            divide by offering free, professional websites to small businesses
+            and fostering tech education for the next generation through
+            workshops, tutoring, and hands-on learning experiences.
           </p>
         </div>
       </section>
-      <section class="content-section team">
-        <div class="box">
-          <h2>Meet the Team</h2>
-          <div class="team">
-            <img
-              src="WebNest Images/andyimage.png"
-              alt="Andy Yang"
-              class="team-img"
-            />
-            <h4>Andy Yang</h4>
-            <p class="role">Lead Tutor, Web Developer, Project Supervisor</p>
-            <div class="team-info">
-              <p>
-                Andy creates the structure for our websites using HTML and
-                JavaScript to make sure users and clients can navigate them
-                easily. He organizes and hosts our Google Meets workshops, where
-                he teaches the basics of web development in a structured way. In
-                his role as Lead Tutor, Andy walks beginners through web
-                programming concepts using an organized teaching methodology. He
-                makes sure the goal of business owners is realized by helping
-                them choose domain names and setting up websites. Andy
-                supervises the completion of projects, making sure that rules
-                and regulations are followed, keeping an eye on team output, and
-                offering assistance as needed to ensure project delivery is
-                successful.
+
+      <!-- Vision Section -->
+      <section class="vision-section">
+        <div class="glass-card">
+          <div class="icon-wrapper">🚀</div>
+          <h2>Our Vision</h2>
+          <p>
+            WebNest is dedicated to helping small businesses establish a strong
+            online presence while creating equal access to digital resources and
+            opportunities. Through innovative solutions and community
+            partnerships, we're building a future where technology empowers
+            everyone, regardless of their background or financial situation.
+          </p>
+        </div>
+      </section>
+
+      <!-- Team Section -->
+      <section class="team-section">
+        <h2 class="section-title">Meet Our Team</h2>
+        <p class="section-subtitle">
+          Our passionate team of developers, educators, and community leaders
+          working together to make a difference
+        </p>
+
+        <div class="team-grid">
+          <!-- Andy Yang -->
+          <div class="team-card">
+            <div class="team-image-wrapper">
+              <img src="WebNest Images/andyimage.png" alt="Andy Yang" />
+              <div class="team-overlay">
+                <a
+                  href="https://www.linkedin.com/in/andy-yang-7a205a303/"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <span class="linkedin-icon">in</span>
+                </a>
+              </div>
+            </div>
+            <div class="team-content">
+              <h3>Andy Yang</h3>
+              <p class="role">Lead Tutor, Web Developer, Project Supervisor</p>
+              <p class="bio">
+                Andy creates website structures using HTML and JavaScript to
+                ensure seamless navigation. He organizes Google Meet workshops
+                teaching web development basics, supervises project completion,
+                and helps business owners choose domain names and set up their
+                websites.
               </p>
               <a
                 href="https://www.linkedin.com/in/andy-yang-7a205a303/"
                 target="_blank"
-                class="more-info"
-                >More Info</a
+                rel="noopener"
+                class="profile-link"
               >
+                View Profile →
+              </a>
             </div>
           </div>
-          <div class="team">
-            <img
-              src="WebNest Images/benson.png"
-              alt="Benson Yang"
-              class="team-img"
-            />
-            <h4>Benson Yang</h4>
-            <p class="role">
-              Manager of Marketing, Graphic Designer, Community Outreach
-            </p>
-            <div class="team-info">
-              <p>
-                Benson Yang, Manager of Marketing and Graphic Designer: Benson
-                makes creative and visually appealing page interfaces with
-                WordPress and CSS. He oversees initiatives to provide small
-                companies with free websites, empowering neighborhood businesses
-                and fostering community development. In order to encourage the
-                upcoming generation of computer enthusiasts, he promotes our web
-                development tutoring programs at schools. He works with tech
-                organizations to raise awareness of tech challenges and spread
-                the word about our projects, encouraging wider involvement and
-                support. He also manages our fortnightly community newsletter,
-                keeping everyone informed and engaged.
-              </p>
 
+          <!-- Benson Yang -->
+          <div class="team-card">
+            <div class="team-image-wrapper">
+              <img src="WebNest Images/benson.png" alt="Benson Yang" />
+              <div class="team-overlay">
+                <a
+                  href="https://www.linkedin.com/in/bensonyang91/"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <span class="linkedin-icon">in</span>
+                </a>
+              </div>
+            </div>
+            <div class="team-content">
+              <h3>Benson Yang</h3>
+              <p class="role">Manager of Marketing, Graphic Designer</p>
+              <p class="bio">
+                Benson creates visually appealing interfaces with WordPress and
+                CSS. He oversees initiatives providing free websites to small
+                businesses, promotes tutoring programs at schools, and manages
+                the fortnightly community newsletter.
+              </p>
               <a
                 href="https://www.linkedin.com/in/bensonyang91/"
                 target="_blank"
-                class="more-info"
-                >More Info</a
+                rel="noopener"
+                class="profile-link"
               >
+                View Profile →
+              </a>
+            </div>
+          </div>
+
+          <!-- Jenny Yang -->
+          <div class="team-card">
+            <div class="team-image-wrapper">
+              <img src="WebNest Images/jenny.png" alt="Jenny Yang" />
+              <div class="team-overlay">
+                <a
+                  href="https://www.linkedin.com/in/jennyyang55/"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <span class="linkedin-icon">in</span>
+                </a>
+              </div>
+            </div>
+            <div class="team-content">
+              <h3>Jenny Yang</h3>
+              <p class="role">Media Specialist</p>
+              <p class="bio">
+                Jenny organizes seminar conventions, tutoring sessions, and
+                workshops. She ensures all media elements are in place and
+                coordinates logistics for each event, helping attendees get the
+                most from our programs.
+              </p>
+              <a
+                href="https://www.linkedin.com/in/jennyyang55/"
+                target="_blank"
+                rel="noopener"
+                class="profile-link"
+              >
+                View Profile →
+              </a>
+            </div>
+          </div>
+
+          <!-- Munif Ahmed -->
+          <div class="team-card">
+            <div class="team-image-wrapper">
+              <img src="WebNest Images/munif.png" alt="Munif Ahmed" />
+              <div class="team-overlay">
+                <a
+                  href="https://www.linkedin.com/in/munif-ahmed-858b49248/"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <span class="linkedin-icon">in</span>
+                </a>
+              </div>
+            </div>
+            <div class="team-content">
+              <h3>Munif Ahmed</h3>
+              <p class="role">Head of Volunteers</p>
+              <p class="bio">
+                Munif oversees WebNest's volunteer programs, managing
+                recruitment, training, and scheduling. He fosters a culture of
+                collaboration and service, ensuring volunteers align with
+                WebNest's mission and contribute meaningfully.
+              </p>
+              <a
+                href="https://www.linkedin.com/in/munif-ahmed-858b49248/"
+                target="_blank"
+                rel="noopener"
+                class="profile-link"
+              >
+                View Profile →
+              </a>
+            </div>
+          </div>
+
+          <!-- Ethan Greenwald -->
+          <div class="team-card">
+            <div class="team-image-wrapper">
+              <img src="WebNest Images/ethan.png" alt="Ethan Greenwald" />
+              <div class="team-overlay">
+                <a
+                  href="https://www.linkedin.com/in/ethan-greenwald-105bb2333/"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <span class="linkedin-icon">in</span>
+                </a>
+              </div>
+            </div>
+            <div class="team-content">
+              <h3>Ethan Greenwald</h3>
+              <p class="role">Volunteer Coordinator</p>
+              <p class="bio">
+                Ethan facilitates training sessions, ensures clear
+                communication, and provides resources to volunteers. With a
+                passion for leadership, he aligns volunteer efforts with
+                organizational goals, fostering a productive community.
+              </p>
+              <a
+                href="https://www.linkedin.com/in/ethan-greenwald-105bb2333/"
+                target="_blank"
+                rel="noopener"
+                class="profile-link"
+              >
+                View Profile →
+              </a>
+            </div>
+          </div>
+
+          <!-- Anthony Sanjurjo -->
+          <div class="team-card">
+            <div class="team-image-wrapper">
+              <img src="WebNest Images/anthony.png" alt="Anthony Sanjurjo" />
+              <div class="team-overlay">
+                <span class="linkedin-icon">in</span>
+              </div>
+            </div>
+            <div class="team-content">
+              <h3>Anthony Sanjurjo</h3>
+              <p class="role">Community Engagement Specialist</p>
+              <p class="bio">
+                Anthony strengthens WebNest's relationships with the local
+                community through outreach initiatives. His expertise in
+                community relations helps bridge the gap between WebNest's
+                services and the people who benefit.
+              </p>
+              <a href="#" class="profile-link"> View Profile → </a>
+            </div>
+          </div>
+
+          <!-- Terry Dong -->
+          <div class="team-card">
+            <div class="team-image-wrapper">
+              <img src="WebNest Images/terry.png" alt="Terry Dong" />
+              <div class="team-overlay">
+                <span class="linkedin-icon">in</span>
+              </div>
+            </div>
+            <div class="team-content">
+              <h3>Terry Dong</h3>
+              <p class="role">Technical Lead & Backend Developer</p>
+              <p class="bio">
+                Terry oversees WebNest's technical direction, ensuring robust
+                and scalable backend systems. With expertise in Python, Node.js,
+                and cloud services, he optimizes databases and mentors junior
+                developers.
+              </p>
+              <a
+                href="https://www.linkedin.com/"
+                target="_blank"
+                rel="noopener"
+                class="profile-link"
+              >
+                View Profile →
+              </a>
+            </div>
+          </div>
+
+          <!-- Charles Martin -->
+          <div class="team-card">
+            <div class="team-image-wrapper">
+              <img src="WebNest Images/charles.png" alt="Charles Martin" />
+              <div class="team-overlay">
+                <span class="linkedin-icon">in</span>
+              </div>
+            </div>
+            <div class="team-content">
+              <h3>Charles Martin</h3>
+              <p class="role">Business Development Manager</p>
+              <p class="bio">
+                Charles drives WebNest's growth by identifying partnership
+                opportunities and expanding the client base. His expertise in
+                market research helps align WebNest with industry trends and
+                manage sponsorships.
+              </p>
+              <a
+                href="https://www.linkedin.com/"
+                target="_blank"
+                rel="noopener"
+                class="profile-link"
+              >
+                View Profile →
+              </a>
+            </div>
+          </div>
+
+          <!-- Carson Smith -->
+          <div class="team-card">
+            <div class="team-image-wrapper">
+              <img src="WebNest Images/carson.png" alt="Carson Smith" />
+              <div class="team-overlay">
+                <span class="linkedin-icon">in</span>
+              </div>
+            </div>
+            <div class="team-content">
+              <h3>Carson Smith</h3>
+              <p class="role">UI/UX Designer</p>
+              <p class="bio">
+                Carson creates intuitive and visually appealing designs that
+                enhance user experience. His skills in wireframing, prototyping,
+                and user testing help maximize engagement and usability for all
+                projects.
+              </p>
+              <a
+                href="https://www.linkedin.com/"
+                target="_blank"
+                rel="noopener"
+                class="profile-link"
+              >
+                View Profile →
+              </a>
             </div>
           </div>
         </div>
-        <div class="team">
-          <img
-            src="WebNest Images/jenny.png"
-            alt="Jenny Yang"
-            class="team-img"
-          />
-          <h4>Jenny Yang</h4>
-          <p class="role">Media Specialist</p>
-          <div class="team-info">
-            <p>
-              Jenny plays a crucial role in organizing seminar conventions,
-              tutoring sessions, and workshops. She ensures all media elements
-              are in place and coordinates logistics for each event, helping
-              attendees and learners get the most from our programs.
-            </p>
-            <a
-              href="https://www.linkedin.com/in/jennyyang55/"
-              target="_blank"
-              class="more-info"
-              >More Info</a
-            >
-          </div>
-        </div>
-        <div class="team">
-          <img
-            src="WebNest Images/munif.png"
-            alt="Munif Ahmed"
-            class="team-img"
-          />
-          <h4>Munif Ahmed</h4>
-          <p class="role">Head of Volunteers</p>
-          <div class="team-info">
-            <p>
-              Munif plays a pivotal role in overseeing WebNest's volunteer
-              programs, ensuring efficient coordination and smooth execution of
-              initiatives. With a strong commitment to community service, he
-              manages recruitment, training, and scheduling for volunteers,
-              making sure they are aligned with WebNest's mission and project
-              goals. Munif continuously works to foster a culture of
-              collaboration and service, creating an environment where
-              volunteers can thrive and contribute meaningfully.
-            </p>
-            <a
-              href="https://www.linkedin.com/in/munif-ahmed-858b49248/"
-              target="_blank"
-              class="more-info"
-              >More Info</a
-            >
-          </div>
-        </div>
+      </section>
 
-        <div class="team">
-          <img
-            src="WebNest Images/ethan.png"
-            alt="Ethan Greenwald"
-            class="team-img"
-          />
-          <h4>Ethan Greenwald</h4>
-          <p class="role">Volunteer Coordinator</p>
-          <div class="team-info">
-            <p>
-              Ethan is instrumental in organizing and supporting WebNest's
-              volunteer workforce. His responsibilities include facilitating
-              training sessions, ensuring clear communication, and providing the
-              necessary resources to volunteers so they can effectively
-              contribute to various projects. With a passion for leadership and
-              team-building, Ethan works closely with project leads to align
-              volunteer efforts with the organization's strategic goals,
-              fostering a productive and engaged volunteer community.
-            </p>
-            <a
-              href="https://www.linkedin.com/in/ethan-greenwald-105bb2333/"
-              target="_blank"
-              class="more-info"
-              >More Info</a
-            >
-          </div>
-        </div>
-
-        <div class="team">
-          <img
-            src="WebNest Images/anthony.png"
-            alt="Anthony Sanjurjo"
-            class="team-img"
-          />
-          <h4>Anthony Sanjurjo</h4>
-          <p class="role">Community Engagement Specialist</p>
-          <div class="team-info">
-            <p>
-              Anthony focuses on strengthening WebNest's relationships with the
-              local community by developing and executing outreach initiatives
-              that address the specific needs of small businesses and
-              individuals. His expertise in community relations helps bridge the
-              gap between WebNest's services and the people who benefit from
-              them. Anthony also works on event planning and strategic
-              partnerships to increase WebNest's visibility and impact within
-              the community.
-            </p>
-            <a href="#" target="_blank" class="more-info">More Info</a>
-          </div>
-        </div>
-
-        <div class="team">
-          <img
-            src="WebNest Images/terry.png"
-            alt="Terry Dong"
-            class="team-img"
-          />
-          <h4>Terry Dong</h4>
-          <p class="role">Technical Lead & Backend Developer</p>
-          <div class="team-info">
-            <p>
-              Terry is responsible for overseeing the technical direction of
-              WebNest, ensuring that all backend systems are robust, scalable,
-              and secure. With expertise in Python, Node.js, and cloud services,
-              he optimizes database structures and API integrations to provide
-              seamless performance for our clients. Terry collaborates closely
-              with front-end developers to implement dynamic functionalities and
-              troubleshoot technical challenges. He also mentors junior
-              developers, sharing his knowledge to strengthen the team's
-              technical capabilities.
-            </p>
-            <a
-              href="https://www.linkedin.com/"
-              target="_blank"
-              class="more-info"
-              >More Info</a
-            >
-          </div>
-        </div>
-
-        <div class="team">
-          <img
-            src="WebNest Images/charles.png"
-            alt="Charles Martin"
-            class="team-img"
-          />
-          <h4>Charles Martin</h4>
-          <p class="role">Business Development Manager</p>
-          <div class="team-info">
-            <p>
-              Charles drives WebNest's growth strategy by identifying new
-              partnership opportunities and expanding our client base. He works
-              closely with local businesses to understand their digital needs
-              and tailor our services accordingly. His expertise in market
-              research and strategic planning helps WebNest align with evolving
-              industry trends. Charles is also responsible for managing
-              sponsorships and fostering long-term relationships with
-              stakeholders to ensure sustainable growth and impact.
-            </p>
-            <a
-              href="https://www.linkedin.com/"
-              target="_blank"
-              class="more-info"
-              >More Info</a
-            >
-          </div>
-        </div>
-
-        <div class="team">
-          <img
-            src="WebNest Images/carson.png"
-            alt="Carson Smith"
-            class="team-img"
-          />
-          <h4>Carson Smith</h4>
-          <p class="role">UI/UX Designer</p>
-          <div class="team-info">
-            <p>
-              Carson specializes in creating intuitive and visually appealing
-              designs that enhance the user experience for WebNest clients. He
-              works closely with the development team to ensure that the user
-              interface aligns with client expectations and industry best
-              practices. Carson's skills in wireframing, prototyping, and user
-              testing help refine website layouts and features to maximize
-              engagement and usability. His passion for design drives continuous
-              innovation within WebNest's projects.
-            </p>
-            <a
-              href="https://www.linkedin.com/"
-              target="_blank"
-              class="more-info"
-              >More Info</a
-            >
-          </div>
+      <!-- Call to Action -->
+      <section class="cta-section">
+        <div class="glass-card cta-content">
+          <h2>Join Our Mission</h2>
+          <p>
+            Want to be part of our team? We're always looking for passionate
+            individuals who want to make a difference in their community through
+            technology.
+          </p>
+          <button
+            class="cta-button"
+            onclick="window.location.href='event.html#volunteer-signup'"
+          >
+            Become a Volunteer
+            <span class="arrow">→</span>
+          </button>
         </div>
       </section>
     </main>
+
     <footer>
       <div class="footer-content">
-        <div class="contact-info">
-          <h2>Contact</h2>
-          <div class="contact-details">
-            <img src="WebNest Images/phone.png" alt="Phone Icon" />
-            <p><a href="tel:+18049314474">804-931-4474</a></p>
+        <div class="footer-section">
+          <h3>Contact Us</h3>
+          <div class="contact-item">
+            <img src="WebNest Images/phone.png" alt="Phone" />
+            <a href="tel:+18049314474">804-931-4474</a>
           </div>
-          <div class="contact-details">
-            <img src="WebNest Images/email.png" alt="Email Icon" />
-            <p>
-              <a href="mailto:webnestchva@gmail.com">webnestchva@gmail.com</a>
-            </p>
+          <div class="contact-item">
+            <img src="WebNest Images/email.png" alt="Email" />
+            <a href="mailto:webnestchva@gmail.com">webnestchva@gmail.com</a>
           </div>
-          <div class="contact-details">
-            <img src="WebNest Images/location.png" alt="Location Icon" />
-            <p>Colonial Heights, VA 23834</p>
+          <div class="contact-item">
+            <img src="WebNest Images/location.png" alt="Location" />
+            <span>Colonial Heights, VA 23834</span>
           </div>
         </div>
-        <div class="webnest-info"></div>
+
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <a href="index.html">Home</a>
+          <a href="request.html">Request Website</a>
+          <a href="event.html">Events</a>
+          <a href="donation.html">Donate</a>
+        </div>
+
+        <div class="footer-branding">
+          <div class="logo">
+            <img src="WebNest Images/logo.png" alt="WebNest Logo" />
+            WebNest
+          </div>
+          <p>Empowering communities through technology</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 WebNest Nonprofit. All rights reserved.</p>
       </div>
     </footer>
+
     <script src="JS/about.js"></script>
+    <script>
+      // Header scroll effect
+      window.addEventListener("scroll", function () {
+        const header = document.getElementById("mainHeader");
+        if (window.scrollY > 50) {
+          header.classList.add("scrolled");
+        } else {
+          header.classList.remove("scrolled");
+        }
+      });
+
+      // Intersection Observer for animations
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px",
+      };
+
+      const observer = new IntersectionObserver(function (entries) {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("animate-in");
+          }
+        });
+      }, observerOptions);
+
+      document.querySelectorAll(".team-card, .glass-card").forEach((el) => {
+        observer.observe(el);
+      });
+    </script>
   </body>
 </html>
