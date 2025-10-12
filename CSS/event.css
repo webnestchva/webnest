@@ -878,3 +878,255 @@ footer {
     padding: 2.5em 2em;
   }
 }
+
+
+/* Form Messages (Success/Error) */
+.form-message {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 16px;
+  padding: 2em;
+  margin-bottom: 2em;
+  text-align: center;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.form-message::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+}
+
+.form-message .message-icon {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 36px;
+  font-weight: bold;
+  margin: 0 auto 1em;
+  animation: scaleIn 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+@keyframes scaleIn {
+  0% {
+    transform: scale(0) rotate(-180deg);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+.success-message {
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, rgba(5, 150, 105, 0.05) 100%);
+  border: 2px solid rgba(16, 185, 129, 0.3);
+}
+
+.success-message::before {
+  background: linear-gradient(90deg, #10b981, #059669);
+}
+
+.success-message .message-icon {
+  background: linear-gradient(135deg, #10b981, #059669);
+  color: white;
+  box-shadow: 0 4px 20px rgba(16, 185, 129, 0.4);
+}
+
+.error-message-box {
+  background: linear-gradient(135deg, rgba(239, 68, 68, 0.1) 0%, rgba(220, 38, 38, 0.05) 100%);
+  border: 2px solid rgba(239, 68, 68, 0.3);
+}
+
+.error-message-box::before {
+  background: linear-gradient(90deg, #ef4444, #dc2626);
+}
+
+.error-message-box .message-icon {
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+  color: white;
+  box-shadow: 0 4px 20px rgba(239, 68, 68, 0.4);
+}
+
+.form-message h3 {
+  margin: 0 0 0.5em 0;
+  font-size: 1.8em;
+  color: var(--dark-bg);
+  font-weight: 700;
+}
+
+.form-message p {
+  margin: 0;
+  color: #4b5563;
+  font-size: 1.1em;
+  line-height: 1.6;
+}
+
+/* Slide animations for messages */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+}
+
+/* Loading state for button */
+.submit-button.loading {
+  opacity: 0.7;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.submit-button.loading .button-arrow {
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+/* Error state for inputs */
+input.error,
+select.error,
+textarea.error {
+  border-color: #ef4444 !important;
+  background: rgba(239, 68, 68, 0.05) !important;
+}
+
+input.error:focus,
+select.error:focus,
+textarea.error:focus {
+  border-color: #ef4444 !important;
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.2) !important;
+}
+
+/* Field error messages */
+.form-group .error-message {
+  color: #ef4444;
+  font-size: 0.85em;
+  margin-top: 0.5em;
+  display: none;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Form hints */
+.form-hint {
+  display: block;
+  color: var(--text-secondary);
+  font-size: 0.9em;
+  margin-top: 0.5em;
+  opacity: 0.8;
+  font-style: italic;
+}
+
+/* Smooth focus transitions */
+.form-group input,
+.form-group select,
+.form-group textarea {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Enhanced hover effects */
+.form-group input:hover,
+.form-group select:hover,
+.form-group textarea:hover {
+  border-color: rgba(0, 216, 255, 0.3);
+}
+
+/* Success state animation */
+@keyframes successShake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  75% {
+    transform: translateX(5px);
+  }
+}
+
+.form-message.success-message {
+  animation: slideDown 0.4s ease-out, successShake 0.6s ease 0.4s;
+}
+
+/* Improved button feedback */
+.submit-button:active:not(.loading) {
+  transform: scale(0.98);
+}
+
+/* Mobile responsiveness for messages */
+@media (max-width: 768px) {
+  .form-message {
+    padding: 1.5em;
+  }
+  
+  .form-message .message-icon {
+    width: 60px;
+    height: 60px;
+    font-size: 30px;
+  }
+  
+  .form-message h3 {
+    font-size: 1.5em;
+  }
+  
+  .form-message p {
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 480px) {
+  .form-message {
+    padding: 1.2em;
+  }
+  
+  .form-message .message-icon {
+    width: 50px;
+    height: 50px;
+    font-size: 26px;
+  }
+  
+  .form-message h3 {
+    font-size: 1.3em;
+  }
+}
