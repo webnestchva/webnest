@@ -121,7 +121,7 @@ nav ul {
   position: absolute;
   top: 100%;
   right: 0;
-  background: rgba(20, 20, 30, 0.95);
+  background: rgba(20, 20, 30, 0.98);
   backdrop-filter: blur(20px);
   min-width: 220px;
   border-radius: 12px;
@@ -129,11 +129,31 @@ nav ul {
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
   margin-top: 0.5em;
   overflow: hidden;
+  padding: 0.5em 0;
 }
 
-.dropdown:hover .dropdown-content {
+/* Show dropdown on hover OR when active class is added */
+.dropdown:hover .dropdown-content,
+.dropdown.active .dropdown-content {
   display: block;
   animation: fadeInDown 0.3s ease;
+}
+
+/* Visual feedback when menu is active */
+.dropdown.active .dropbtn {
+  background: rgba(0, 216, 255, 0.15);
+}
+
+/* Add padding around dropdown area to prevent accidental closing on hover */
+.dropdown::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  right: -10px;
+  left: -10px;
+  height: 15px;
+  background: transparent;
+  pointer-events: auto;
 }
 
 @keyframes fadeInDown {
