@@ -182,7 +182,7 @@
         </div>
       </section>
 
-      <!-- Workshop Sign-Up Section -->
+      <!-- Workshop Session Sign-Up Section -->
       <section class="signup-section" id="tutoring-signup">
         <div class="glass-card">
           <h2>Workshop Session Sign-Up</h2>
@@ -219,17 +219,16 @@
             </div>
             <div class="form-group">
               <label for="tutoring-event">Event/Workshop Interested In *</label>
-              <select id="tutoring-event" name="tutoring-event" required>
-                <option value="" disabled selected>Select a workshop</option>
-                <option value="KAP Python - Wednesdays">
-                  KAP Python Workshop (Wednesdays)
-                </option>
-                <option value="Weekly CS Talks - Mondays">
-                  Weekly Python & CS Talks (Mondays)
-                </option>
-                <option value="Both">Both Workshops</option>
-                <option value="General Interest">General Interest</option>
-              </select>
+              <input
+                type="text"
+                id="tutoring-event"
+                name="tutoring-event"
+                required
+                placeholder="e.g., KAP Python Workshop, Weekly Python & CS Talks, or Both"
+              />
+              <small class="form-hint"
+                >Tell us which workshop(s) you'd like to join</small
+              >
             </div>
             <button type="submit" class="submit-button">
               <span>Sign Up for Workshop</span>
@@ -276,19 +275,15 @@
               </div>
             </div>
             <div class="form-group">
-              <label for="volunteer-event">Area of Interest *</label>
-              <select id="volunteer-event" name="volunteer-event" required>
-                <option value="" disabled selected>
-                  How would you like to help?
-                </option>
-                <option value="Workshop Assistant">Workshop Assistant</option>
-                <option value="Tutoring Support">Tutoring Support</option>
-                <option value="Event Coordination">Event Coordination</option>
-                <option value="Technical Support">Technical Support</option>
-                <option value="General Volunteering">
-                  General Volunteering
-                </option>
-              </select>
+              <label for="volunteer-interest">Area of Interest *</label>
+              <input
+                type="text"
+                id="volunteer-interest"
+                name="volunteer-interest"
+                required
+                placeholder="e.g., Workshop Assistant, Tutoring Support, Event Coordination"
+              />
+              <small class="form-hint">Tell us how you'd like to help</small>
             </div>
             <button type="submit" class="submit-button volunteer-btn">
               <span>Join as Volunteer</span>
