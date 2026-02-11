@@ -1,0 +1,409 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Will You Be My Valentine? 💝</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        overflow-x: hidden;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .hearts-background {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: 0;
+      }
+
+      .floating-heart {
+        position: absolute;
+        font-size: 20px;
+        animation: floatUp 8s infinite;
+        opacity: 0;
+      }
+
+      @keyframes floatUp {
+        0% {
+          transform: translateY(100vh) rotate(0deg);
+          opacity: 0;
+        }
+        10% {
+          opacity: 1;
+        }
+        90% {
+          opacity: 1;
+        }
+        100% {
+          transform: translateY(-100vh) rotate(360deg);
+          opacity: 0;
+        }
+      }
+
+      .container {
+        position: relative;
+        z-index: 1;
+        text-align: center;
+        padding: 40px;
+        max-width: 600px;
+        width: 90%;
+      }
+
+      .question-card {
+        background: rgba(255, 255, 255, 0.95);
+        border-radius: 30px;
+        padding: 50px 40px;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        backdrop-filter: blur(10px);
+        transform: scale(0);
+        animation: popIn 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+        animation-delay: 0.2s;
+      }
+
+      @keyframes popIn {
+        to {
+          transform: scale(1);
+        }
+      }
+
+      .bear-container {
+        font-size: 100px;
+        margin-bottom: 20px;
+        animation: bounce 2s infinite;
+      }
+
+      @keyframes bounce {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-20px);
+        }
+      }
+
+      h1 {
+        font-size: 2.5em;
+        color: #e91e63;
+        margin-bottom: 20px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .buttons-container {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        margin-top: 40px;
+        flex-wrap: wrap;
+      }
+
+      .btn {
+        padding: 15px 40px;
+        border: none;
+        border-radius: 50px;
+        font-size: 1.2em;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        position: relative;
+      }
+
+      .btn-yes {
+        background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        color: white;
+      }
+
+      .btn-yes:hover {
+        transform: scale(1.1);
+        box-shadow: 0 6px 20px rgba(245, 87, 108, 0.4);
+      }
+
+      .btn-no {
+        background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+        color: #666;
+        transition: all 0.2s ease;
+      }
+
+      .btn-no:hover {
+        transform: scale(0.9);
+      }
+
+      .celebration {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+        z-index: 1000;
+        justify-content: center;
+        align-items: center;
+        animation: fadeIn 0.5s ease;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      .celebration-content {
+        text-align: center;
+        animation: celebrationPop 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55)
+          forwards;
+      }
+
+      .celebration-photo {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 5px solid white;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        margin: 0 auto 30px;
+        display: block;
+      }
+
+      @keyframes celebrationPop {
+        from {
+          transform: scale(0);
+        }
+        to {
+          transform: scale(1);
+        }
+      }
+
+      .celebration h2 {
+        font-size: 4em;
+        color: #e91e63;
+        margin-bottom: 30px;
+        animation: heartbeat 1.5s infinite;
+      }
+
+      @keyframes heartbeat {
+        0%,
+        100% {
+          transform: scale(1);
+        }
+        10%,
+        30% {
+          transform: scale(1.1);
+        }
+        20%,
+        40% {
+          transform: scale(1);
+        }
+      }
+
+      .celebration-emojis {
+        font-size: 100px;
+        margin: 30px 0;
+      }
+
+      .celebration-message {
+        font-size: 1.8em;
+        color: #d81b60;
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      .confetti {
+        position: fixed;
+        width: 10px;
+        height: 10px;
+        background: #f0f;
+        position: absolute;
+        animation: confettiFall 3s linear infinite;
+      }
+
+      @keyframes confettiFall {
+        to {
+          transform: translateY(100vh) rotate(360deg);
+        }
+      }
+
+      .subtitle {
+        font-size: 1.2em;
+        color: #666;
+        margin-top: 15px;
+        font-style: italic;
+      }
+
+      @media (max-width: 600px) {
+        h1 {
+          font-size: 2em;
+        }
+        .bear-container {
+          font-size: 80px;
+        }
+        .btn {
+          padding: 12px 30px;
+          font-size: 1em;
+        }
+        .celebration h2 {
+          font-size: 2.5em;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="hearts-background" id="heartsContainer"></div>
+
+    <div class="container">
+      <div class="question-card">
+        <div class="bear-container">🐱</div>
+        <h1>Will You Be My Valentine?</h1>
+        <p class="subtitle">I've been thinking about this for a while...</p>
+
+        <div class="buttons-container">
+          <button class="btn btn-yes" id="yesBtn">Yes! 💕</button>
+          <button class="btn btn-no" id="noBtn">No</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="celebration" id="celebration">
+      <div class="celebration-content">
+        <h2>Yay! 🎉</h2>
+        <img src="her-photo.jpg" alt="💝" class="celebration-photo" />
+        <div class="celebration-emojis">💝🐱✨💖🌹</div>
+        <p class="celebration-message">
+          You just made me the happiest person in the world! 🥰
+          <br /><br />
+          I promise to bring you pho when you're sick, travel with you to places
+          no one could find (not the mountain), and be the light at the end of
+          the dark tunnel.
+          <br /><br />
+          You're purrfect, and I'm so lucky you're my Valentine! 💕
+        </p>
+      </div>
+    </div>
+
+    <script>
+      // Floating hearts in background
+      const heartsContainer = document.getElementById("heartsContainer");
+      const heartEmojis = ["💕", "💖", "💗", "💝", "💘", "❤️", "🌹"];
+
+      function createFloatingHeart() {
+        const heart = document.createElement("div");
+        heart.className = "floating-heart";
+        heart.textContent =
+          heartEmojis[Math.floor(Math.random() * heartEmojis.length)];
+        heart.style.left = Math.random() * 100 + "%";
+        heart.style.animationDuration = Math.random() * 4 + 6 + "s";
+        heart.style.animationDelay = Math.random() * 2 + "s";
+        heartsContainer.appendChild(heart);
+
+        setTimeout(() => {
+          heart.remove();
+        }, 10000);
+      }
+
+      setInterval(createFloatingHeart, 500);
+
+      // Button interactions
+      const yesBtn = document.getElementById("yesBtn");
+      const noBtn = document.getElementById("noBtn");
+      const celebration = document.getElementById("celebration");
+
+      let noBtnSize = 1;
+      let noClickCount = 0;
+
+      yesBtn.addEventListener("click", () => {
+        celebration.style.display = "flex";
+        createConfetti();
+
+        // Play celebration animation
+        setTimeout(() => {
+          const celebEmojis = document.querySelector(".celebration-emojis");
+          celebEmojis.style.animation = "bounce 0.5s ease infinite";
+        }, 600);
+      });
+
+      noBtn.addEventListener("click", () => {
+        noClickCount++;
+
+        // Shrink the No button
+        noBtnSize -= 0.15;
+        noBtn.style.transform = `scale(${noBtnSize})`;
+
+        // Grow the Yes button
+        const yesScale = 1 + noClickCount * 0.15;
+        yesBtn.style.transform = `scale(${yesScale})`;
+
+        // Change No button text
+        const noTexts = [
+          "Are you sure?",
+          "Really? 🥺",
+          "Please? 💔",
+          "Think again! 🙏",
+          "One more chance? 💝",
+        ];
+
+        if (noClickCount <= noTexts.length) {
+          noBtn.textContent = noTexts[noClickCount - 1];
+        }
+
+        // Make No button harder to click
+        const randomX = (Math.random() - 0.5) * 100;
+        const randomY = (Math.random() - 0.5) * 100;
+        noBtn.style.position = "relative";
+        noBtn.style.left = randomX + "px";
+        noBtn.style.top = randomY + "px";
+
+        if (noBtnSize <= 0.3) {
+          noBtn.style.display = "none";
+          alert("Guess the universe wants you to say yes! 💕");
+        }
+      });
+
+      function createConfetti() {
+        const colors = [
+          "#f093fb",
+          "#f5576c",
+          "#4facfe",
+          "#00f2fe",
+          "#ffd89b",
+          "#19547b",
+        ];
+
+        for (let i = 0; i < 100; i++) {
+          setTimeout(() => {
+            const confetti = document.createElement("div");
+            confetti.className = "confetti";
+            confetti.style.left = Math.random() * 100 + "%";
+            confetti.style.top = "-10px";
+            confetti.style.background =
+              colors[Math.floor(Math.random() * colors.length)];
+            confetti.style.animationDuration = Math.random() * 2 + 2 + "s";
+            confetti.style.animationDelay = Math.random() + "s";
+            document.body.appendChild(confetti);
+
+            setTimeout(() => confetti.remove(), 4000);
+          }, i * 30);
+        }
+      }
+    </script>
+  </body>
+</html>
